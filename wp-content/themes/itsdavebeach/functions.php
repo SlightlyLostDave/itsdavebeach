@@ -62,5 +62,12 @@ if ( ! function_exists( 'itsdavebeach_setup' ) ) :
 		remove_action('wp_head', 'adjacent_posts_rel_link');
 	}
 endif;
-
 add_action( 'after_setup_theme', 'itsdavebeach_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function itsdavebeach_scripts() {
+	wp_enqueue_style( 'itsdavebeach-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'itsdavebeach_scripts' );
