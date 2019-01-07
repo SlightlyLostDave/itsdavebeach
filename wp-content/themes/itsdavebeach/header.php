@@ -23,7 +23,7 @@
     <a href="#content">Skip to content</a>
 
     <button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation">
-		<span class="hamburger-box">
-			<span class="hamburger-inner"></span>
+		<span class="hamburger__box">
+			<span class="hamburger__inner"></span>
 		</span>
 	</button>
