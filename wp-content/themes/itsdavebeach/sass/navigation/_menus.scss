@@ -3,7 +3,7 @@
 
     display: inline-block;
 
-    transition: opacity, filter 0.15s linear;
+    transition: opacity 0.15s linear;
 
     border: 0;
 
@@ -14,7 +14,7 @@
         opacity: 0.7;
     }
 
-    &.active {
+    &.is-active {
         &:hover {
             opacity: 0.7;
         }
@@ -23,6 +23,30 @@
         .hamburger__inner::before,
         .hamburger__inner::after {
             background-color: #000;
+        }
+
+        .hamburger__inner {
+            transform: rotate(225deg);
+
+            transition-delay: 0.12s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &::before {
+                top: 0;
+
+                opacity: 0;
+
+                transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+            }
+
+            &::after {
+                bottom: 0;
+
+                transform: rotate(-90deg);
+
+                transition: bottom 0.1s ease-out,
+                    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
         }
     }
 }
@@ -40,6 +64,9 @@
     top: 50%;
 
     display: block;
+
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
     margin-top: -2px;
 
@@ -66,9 +93,14 @@
 
     &::before {
         top: -10px;
+
+        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     }
 
     &::after {
         bottom: -10px;
+
+        transition: top 0.1s 0.25s ease-in,
+            transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
 }
