@@ -25,6 +25,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Menus
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Colour Set #1
+# https://i.imgur.com/039fM3e.png
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Colour Set #2
+https://i.imgur.com/3DJ2XXq.png
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography Set #1
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro");
+/*--------------------------------------------------------------
+# Typography Set #2
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento");
+/*--------------------------------------------------------------
+# Typography Set #3
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow|Six+Caps|Source+Sans+Pro");
+/*--------------------------------------------------------------
+# Typography Set #4
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Anton|Open+Sans:300");
+/*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
