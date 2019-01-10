@@ -17,6 +17,7 @@ Text Domain: itsdavebeach
 # Navigation
 	## Menus
 # Accessibility
+# Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Colour Set options
@@ -33,7 +34,7 @@ https://i.imgur.com/3DJ2XXq.png
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Lato");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:300");
 html {
   line-height: 1.15;
   /* 1 */
@@ -60,7 +61,7 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0; }
 
 /* Grouping content
      ========================================================================== */
@@ -341,8 +342,8 @@ input,
 select,
 optgroup,
 textarea {
-  color: #f5f1f2;
-  font: 12pt "Lato", sans-serif;
+  color: #1a1a1d;
+  font: 12pt "Open Sans", sans-serif;
   line-height: 1.5em; }
 
 /*--------------------------------------------------------------
@@ -359,11 +360,41 @@ html {
 *:focus {
   outline: thin dotted; }
 
+body {
+  background: #f5f1f2; }
+
+hr {
+  margin-bottom: 1.5em;
+  border: 0;
+  height: 1px;
+  background-color: #1a1a1d; }
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
   /* Adhere to container width. */ }
+
+ul,
+ol {
+  margin: 0 0 1.5em 3em; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5em 1.5em; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -373,6 +404,7 @@ img {
 --------------------------------------------------------------*/
 .main-menu {
   position: fixed;
+  z-index: 90;
   top: 0;
   left: 0;
   right: 0;
@@ -412,6 +444,7 @@ img {
 
 .hamburger {
   position: fixed;
+  z-index: 100;
   top: 0;
   right: 0;
   display: inline-block;
@@ -488,5 +521,42 @@ img {
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+#marquee {
+  position: relative; }
+
+.marquee__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: url("media/content/home/marquee/1.jpg") center center/cover; }
+  .marquee__slide::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); }
+
+.marquee__title {
+  position: absolute;
+  z-index: 2;
+  top: 15%;
+  width: 860px;
+  padding: 0 0 0 20%; }
+  .marquee__title .heading-1 {
+    font: 70pt "Josefin Slab", serif;
+    text-transform: uppercase;
+    color: #f5f1f2; }
+  .marquee__title .heading-2 {
+    margin-top: 0;
+    font: 18pt "Open Sans", sans-serif;
+    color: #f5f1f2; }
 
 /*# sourceMappingURL=style.css.map */

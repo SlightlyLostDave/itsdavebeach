@@ -6,7 +6,9 @@ input,
 select,
 optgroup,
 textarea {
-    color: $colour__white;
+    color: $colour__dark-grey;
     font: setStyle($fonts, $selectedFont, tertiary);
     line-height: 1.5em;
 }
+
+@import 'headings';

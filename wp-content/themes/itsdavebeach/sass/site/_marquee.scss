@@ -1,0 +1,50 @@
+#marquee {
+    position: relative;
+}
+
+.marquee__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 100vh;
+
+    background: url('media/content/home/marquee/1.jpg') center center / cover;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.marquee__title {
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+
+    width: 860px;
+    padding: 0 0 0 20%;
+
+    .heading-1 {
+        font: setStyle($fonts, $selectedFont, primary);
+        text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
+        color: $colour__white;
+    }
+
+    .heading-2 {
+        margin-top: 0;
+
+        font: setStyle($fonts, $selectedFont, secondary);
+        color: $colour__white;
+    }
+}

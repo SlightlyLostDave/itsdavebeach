@@ -77,5 +77,9 @@ function itsdavebeach_scripts() {
 
 	wp_enqueue_script( 'itsdavebeach-core', get_template_directory_uri() . '/js/core.js', null, 1.0, true);
 	wp_enqueue_script( 'itsdavebeach-nav', get_template_directory_uri() . '/js/nav.js', null, 1.0, true);
+
+	if ( is_home() ) {
+		wp_enqueue_script( 'itsdavebeach-nav', get_template_directory_uri() . '/js/home.js', null, 1.0, true);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'itsdavebeach_scripts' );

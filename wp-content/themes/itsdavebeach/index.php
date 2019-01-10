@@ -12,29 +12,50 @@
  * @package It's_Dave_Beach
  */
 get_header();
+?>
 
-if ( have_posts() ) :
+    <!-- Marquee -->
+    <section id="marquee">
+        <div class="marquee__slide">
+            <div class="marquee__title">
+                <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
+                <h2 class="heading-2">Full-stack developer with a passion for immersive experiences and blazing-fast code</h2>
+                <button>Let&rsquo;s Go</button>
+            </div>
+        </div>
+    </section>
 
-    /* Start the Loop */
-    while ( have_posts() ) :
-        the_post();
+    <div class="title-block">
 
-        /*
-         * Include the Post-Type-specific template for the content.
-         * If you want to override this in a child theme, then include a file
-         * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-         */
-        get_template_part( 'template-parts/content', get_post_type() );
+    </div>
+    
+    <div class="content-block">
 
-    endwhile;
+        <!-- About -->
+        <section id="about">
 
-    the_posts_navigation();
+        </section>
 
-else :
+        <!-- Résumé -->
+        <section id="resume">
 
-    get_template_part( 'template-parts/content', 'none' );
+        </section>
 
-endif;
+        <!-- Skills -->
+        <section id="skills">
 
-get_sidebar();
+        </section>
+
+        <!-- Blog -->
+
+
+        <!-- Clients & Testimonials -->
+
+
+        <!-- Contact -->
+
+        
+    </div>
+
+<?php
 get_footer();

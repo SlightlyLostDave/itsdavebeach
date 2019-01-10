@@ -9,14 +9,12 @@ $fonts: (
                 'Julius Sans One',
                 sans-serif
             ),
-        primaryLetterSpacing: normal,
         primaryTextTransform: uppercase,
         secondary: bold 24pt
             (
                 'Archivo Narrow',
                 sans-serif
             ),
-        secondaryLetterSpacing: 110,
         secondaryTextTransform: uppercase,
         tertiary: 16pt
             (
@@ -26,20 +24,18 @@ $fonts: (
     ),
     combo2: (
         import:
-            'https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento',
-        primary: 100pt
+            'https://fonts.googleapis.com/css?family=Cinzel|Lora|Archivo+Narrow',
+        primary: 56pt
             (
                 'Cinzel',
                 serif
             ),
-        primaryLetterSpacing: -50,
         primaryTextTransform: none,
-        secondary: 24pt
+        secondary: bold 24pt
             (
-                'Quattrocento',
-                serif
+                'Archivo Narrow',
+                sans-serif
             ),
-        secondaryLetterSpacing: 100,
         secondaryTextTransform: uppercase,
         tertiary: 15pt
             (
@@ -55,14 +51,12 @@ $fonts: (
                 'Six Caps',
                 sans-serif
             ),
-        primaryLetterSpacing: normal,
         primaryTextTransform: uppercase,
         secondary: 22pt
             (
                 'Archivo Narrow',
                 sans-serif
             ),
-        secondaryLetterSpacing: 110,
         secondaryTextTransform: uppercase,
         tertiary: 14pt
             (
@@ -77,14 +71,12 @@ $fonts: (
                 'Anton',
                 sans-serif
             ),
-        primaryLetterSpacing: 10,
         primaryTextTransform: uppercase,
         secondary: 21pt
             (
                 'Open Sans',
                 sans-serif
             ),
-        secondaryLetterSpacing: 110,
         secondaryTextTransform: uppercase,
         tertiary: 14pt
             (
@@ -93,24 +85,23 @@ $fonts: (
             )
     ),
     combo5: (
-        import: 'https://fonts.googleapis.com/css?family=Josefin+Slab|Lato',
-        primary: 100pt
+        import:
+            'https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:300',
+        primary: 70pt
             (
                 'Josefin Slab',
                 serif
             ),
-        primaryLetterSpacing: normal,
-        primaryTextTransform: none,
-        secondary: 21pt
+        primaryTextTransform: uppercase,
+        secondary: 18pt
             (
-                'Lato',
+                'Open Sans',
                 sans-serif
             ),
-        secondaryLetterSpacing: 110,
         secondaryTextTransform: uppercase,
         tertiary: 12pt
             (
-                'Lato',
+                'Open Sans',
                 sans-serif
             )
     )
