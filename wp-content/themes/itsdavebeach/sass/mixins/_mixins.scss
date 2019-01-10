@@ -1,0 +1,17 @@
+@mixin admin-sticky-fix($offset: 0) {
+    $narrow-offset: 46px;
+    $wide-offset: 32px;
+
+    @if $offset != 0 and type-of($offset) == 'number' {
+        $narrow-offset: $narrow-offset + $offset;
+        $wide-offset: $wide-offset + $offset;
+    }
+
+    .admin-bar & {
+        top: $wide-offset;
+
+        @media screen and (max-width: 782px) {
+            top: $narrow-offset;
+        }
+    }
+}

@@ -7,47 +7,22 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: itsdavebeach
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-It's Dave Beach is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Typography
+# Elements
 # Navigation
 	## Menus
+# Accessibility
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Colour Set #1
-# https://i.imgur.com/039fM3e.png
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Colour Set #2
+# Colour Set options
 https://i.imgur.com/3DJ2XXq.png
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Typography Set #1
---------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro");
-/*--------------------------------------------------------------
-# Typography Set #2
---------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento");
-/*--------------------------------------------------------------
-# Typography Set #3
---------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow|Six+Caps|Source+Sans+Pro");
-/*--------------------------------------------------------------
-# Typography Set #4
---------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Anton|Open+Sans:300");
+/*------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -58,6 +33,7 @@ https://i.imgur.com/3DJ2XXq.png
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab|Lato");
 html {
   line-height: 1.15;
   /* 1 */
@@ -357,22 +333,110 @@ template {
   display: none; }
 
 /*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #f5f1f2;
+  font: 12pt "Lato", sans-serif;
+  line-height: 1.5em; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+*:focus {
+  outline: thin dotted; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translate(0, -100%);
+  transition: opacity 0.2s ease;
+  margin: 0;
+  background: #1a1a1d;
+  list-style: none; }
+  .admin-bar .main-menu {
+    top: 32px; }
+    @media screen and (max-width: 782px) {
+      .admin-bar .main-menu {
+        top: 46px; } }
+  .main-menu.is-active {
+    opacity: 1;
+    transform: translate(0, 0); }
+    .main-menu.is-active .menu-item a {
+      transform: translate(0, 0); }
+  .main-menu .menu-item {
+    float: left; }
+    .main-menu .menu-item a {
+      display: block;
+      opacity: 0.7;
+      transform: translate(0, -10px);
+      transition: transform 0.2s ease;
+      padding: 0 1.5em;
+      font-size: 8pt;
+      line-height: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 2px;
+      color: #f5f1f2; }
+      .main-menu .menu-item a:hover {
+        opacity: 1; }
+
 .hamburger {
-  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
   display: inline-block;
   transition: opacity 0.15s linear;
   border: 0;
-  background-color: transparent;
+  padding: 15px;
+  background-color: #c60021;
   cursor: pointer; }
+  .admin-bar .hamburger {
+    top: 32px; }
+    @media screen and (max-width: 782px) {
+      .admin-bar .hamburger {
+        top: 46px; } }
   .hamburger:hover {
-    opacity: 0.7; }
+    opacity: 0.8; }
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60px;
+    border-width: 60px 0 0 60px;
+    border-style: solid;
+    border-color: #c60021 transparent transparent; }
   .hamburger.is-active:hover {
-    opacity: 0.7; }
+    opacity: 0.8; }
   .hamburger.is-active .hamburger__inner,
   .hamburger.is-active .hamburger__inner::before,
   .hamburger.is-active .hamburger__inner::after {
@@ -400,8 +464,7 @@ template {
   top: 50%;
   display: block;
   transition-duration: 0.22s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  margin-top: -2px; }
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger__inner, .hamburger__inner::before, .hamburger__inner::after {
     position: absolute;
     transition: transform 0.15s ease;
@@ -418,5 +481,12 @@ template {
   .hamburger__inner::after {
     bottom: -10px;
     transition: top 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+@media screen and (max-width: 768px) {
+  .main-menu .menu-item {
+    float: none; } }
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

@@ -1,49 +1,117 @@
-/*--------------------------------------------------------------
-# Typography Set #1
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro');
+$selectedFont: combo5;
 
-$font__primary: 62pt 'Julius Sans One', sans-serif;
-$font__primary-text-transform: uppercase;
-$font__secondary: bold 24pt 'Archivo Narrow', sans-serif;
-$font__secondary-letter-spacing: 110;
-$font__secondary-text-transform: uppercase;
-$font__tertiary: 16pt 'Source Sans Pro', sans-serif;
-
-/*--------------------------------------------------------------
-# Typography Set #2
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento');
-
-$font__primary: 100pt 'Cinzel', serif;
-$font__primary-letter-spacing: -50;
-$font__primary-text-transform: uppercase;
-$font__secondary: 24pt 'Quattrocento', serif;
-$font__secondary-letter-spacing: 100;
-$font__secondary-text-transform: uppercase;
-$font__tertiary: 15pt 'Lora', serif;
-
-/*--------------------------------------------------------------
-# Typography Set #3
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Six+Caps|Source+Sans+Pro');
-
-$font__primary: 130pt 'Six Caps', sans-serif;
-$font__primary-text-transform: uppercase;
-$font__secondary: 22pt 'Archivo Narrow', sans-serif;
-$font__secondary-letter-spacing: 110;
-$font__secondary-text-transform: uppercase;
-$font__tertiary: 14pt 'Source Sans Pro', sans-serif;
-
-/*--------------------------------------------------------------
-# Typography Set #4
---------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans:300');
-
-$font__primary: 120pt 'Anton', sans-serif;
-$font__primary-letter-spacing: 10;
-$font__primary-text-transform: uppercase;
-$font__secondary: 21pt 'Open Sans', sans-serif;
-$font__secondary-letter-spacing: 110;
-$font__secondary-text-transform: uppercase;
-$font__tertiary: 14pt 'Open Sans', sans-serif;
+$fonts: (
+    combo1: (
+        import:
+            'https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro',
+        primary: 62pt
+            (
+                'Julius Sans One',
+                sans-serif
+            ),
+        primaryLetterSpacing: normal,
+        primaryTextTransform: uppercase,
+        secondary: bold 24pt
+            (
+                'Archivo Narrow',
+                sans-serif
+            ),
+        secondaryLetterSpacing: 110,
+        secondaryTextTransform: uppercase,
+        tertiary: 16pt
+            (
+                'Source Sans Pro',
+                sans-serif
+            )
+    ),
+    combo2: (
+        import:
+            'https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento',
+        primary: 100pt
+            (
+                'Cinzel',
+                serif
+            ),
+        primaryLetterSpacing: -50,
+        primaryTextTransform: none,
+        secondary: 24pt
+            (
+                'Quattrocento',
+                serif
+            ),
+        secondaryLetterSpacing: 100,
+        secondaryTextTransform: uppercase,
+        tertiary: 15pt
+            (
+                'Lora',
+                serif
+            )
+    ),
+    combo3: (
+        import:
+            'https://fonts.googleapis.com/css?family=Archivo+Narrow|Six+Caps|Source+Sans+Pro',
+        primary: 130pt
+            (
+                'Six Caps',
+                sans-serif
+            ),
+        primaryLetterSpacing: normal,
+        primaryTextTransform: uppercase,
+        secondary: 22pt
+            (
+                'Archivo Narrow',
+                sans-serif
+            ),
+        secondaryLetterSpacing: 110,
+        secondaryTextTransform: uppercase,
+        tertiary: 14pt
+            (
+                'Source Sans Pro',
+                sans-serif
+            )
+    ),
+    combo4: (
+        import: 'https://fonts.googleapis.com/css?family=Anton|Open+Sans:300',
+        primary: 120pt
+            (
+                'Anton',
+                sans-serif
+            ),
+        primaryLetterSpacing: 10,
+        primaryTextTransform: uppercase,
+        secondary: 21pt
+            (
+                'Open Sans',
+                sans-serif
+            ),
+        secondaryLetterSpacing: 110,
+        secondaryTextTransform: uppercase,
+        tertiary: 14pt
+            (
+                'Open Sans',
+                sans-serif
+            )
+    ),
+    combo5: (
+        import: 'https://fonts.googleapis.com/css?family=Josefin+Slab|Lato',
+        primary: 100pt
+            (
+                'Josefin Slab',
+                serif
+            ),
+        primaryLetterSpacing: normal,
+        primaryTextTransform: none,
+        secondary: 21pt
+            (
+                'Lato',
+                sans-serif
+            ),
+        secondaryLetterSpacing: 110,
+        secondaryTextTransform: uppercase,
+        tertiary: 12pt
+            (
+                'Lato',
+                sans-serif
+            )
+    )
+);

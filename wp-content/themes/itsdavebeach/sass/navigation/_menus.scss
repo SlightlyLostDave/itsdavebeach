@@ -1,22 +1,94 @@
+.main-menu {
+    @include admin-sticky-fix;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    transform: translate(0, -100%);
+
+    transition: opacity 0.2s ease;
+
+    margin: 0;
+
+    background: $colour__dark-grey;
+
+    list-style: none;
+
+    &.is-active {
+        opacity: 1;
+        transform: translate(0, 0);
+
+        .menu-item a {
+            transform: translate(0, 0);
+        }
+    }
+
+    .menu-item {
+        float: left;
+
+        a {
+            display: block;
+            opacity: 0.7;
+            transform: translate(0, -10px);
+
+            transition: transform 0.2s ease;
+
+            padding: 0 1.5em;
+
+            font-size: 8pt;
+            line-height: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            color: $colour__white;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .hamburger {
-    padding: 15px;
+    @include admin-sticky-fix;
+
+    position: fixed;
+    top: 0;
+    right: 0;
 
     display: inline-block;
 
     transition: opacity 0.15s linear;
 
     border: 0;
+    padding: 15px;
 
-    background-color: transparent;
+    background-color: $colour__slightly-lost-red;
     cursor: pointer;
 
     &:hover {
-        opacity: 0.7;
+        opacity: 0.8;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: -60px;
+
+        border-width: 60px 0 0 60px;
+        border-style: solid;
+        border-color: $colour__slightly-lost-red transparent transparent;
     }
 
     &.is-active {
         &:hover {
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         .hamburger__inner,
@@ -68,8 +140,6 @@
     transition-duration: 0.22s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
-    margin-top: -2px;
-
     &,
     &::before,
     &::after {
@@ -102,5 +172,11 @@
 
         transition: top 0.1s 0.25s ease-in,
             transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+}
+
+@media screen and (max-width: $size__max-phone) {
+    .main-menu .menu-item {
+        float: none;
     }
 }

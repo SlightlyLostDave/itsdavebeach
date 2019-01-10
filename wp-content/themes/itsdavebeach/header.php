@@ -22,8 +22,19 @@
 <body <?php body_class(); ?>>
     <a href="#content">Skip to content</a>
 
-    <button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation">
-		<span class="hamburger__box">
-			<span class="hamburger__inner"></span>
-		</span>
-	</button>
+	<header>
+		<nav>
+			<?php
+				wp_nav_menu( array(
+					'menu_class' => 'main-menu',
+					'container' => false,
+					'theme_location' => 'primary-menu',
+				) );
+			?>
+		</nav>
+		<button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation">
+			<span class="hamburger__box">
+				<span class="hamburger__inner"></span>
+			</span>
+		</button>
+	</header>

@@ -42,6 +42,11 @@ if ( ! function_exists( 'itsdavebeach_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		// Add theme support for menus
+		register_nav_menus( array(
+			'primary-menu' => __('Primary'),
+		) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
