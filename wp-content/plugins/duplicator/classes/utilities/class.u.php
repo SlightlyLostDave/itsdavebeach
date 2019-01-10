@@ -8,17 +8,12 @@
  * @package Duplicator
  * @subpackage classes/utilities
  * @copyright (c) 2017, Snapcreek LLC
- * @since 1.1.0
  *
  * @todo Refactor out IO methods into class.io.php file
  */
 
 // Exit if accessed directly
-if (!defined('DUPLICATOR_VERSION')) {
-    exit;
-}
-
-//require_once (DUPLICATOR_PLUGIN_PATH.'classes/class.crypt.php');
+if (! defined('DUPLICATOR_VERSION')) exit;
 
 class DUP_Util
 {
@@ -43,6 +38,13 @@ class DUP_Util
     public static $PHP7_plus;
 
     /**
+     * array of ini disable functions
+     * 
+     * @var array
+     */
+    private static $iniDisableFuncs = null;
+
+    /**
      *  Initialized on load (see end of file)
      */
     public static function init()
@@ -53,6 +55,15 @@ class DUP_Util
 		self::$PHP7_plus = version_compare(PHP_VERSION, '7.0.0', '>=');
     }
 
+    public static function objectCopy($srcObject, $destObject, $skipMemberArray = null)
+    {
+        foreach ($srcObject as $member_name => $member_value) {
+            if (!is_object($member_value) && (($skipMemberArray == null) || !in_array($member_name, $skipMemberArray))) {
+                // Skipping all object members
+                $destObject->$member_name = $member_value;
+            }
+        }
+    }
 
     public static function getWPCoreDirs()
     {
@@ -69,10 +80,10 @@ class DUP_Util
         $wp_core_dirs[] = $wp_path.'/plugins';
         $wp_core_dirs[] = $wp_path.'/themes';
 
-
         return $wp_core_dirs;
     }
-    /**
+
+	/**
      * return absolute path for the files that are core directories
      * @return string array
      */
@@ -92,7 +103,7 @@ class DUP_Util
 	 * @param mixed $key,... The key to group or split by. Can be a _string_, an _integer_, a _float_, or a _callable_.
 	 *                       - If the key is a callback, it must return a valid key from the array.
 	 *                       - If the key is _NULL_, the iterated element is skipped.
-	 *                       - string|int callback ( mixed $item )
+	 *                       - string|oink callback ( mixed $item )
 	 *
 	 * @return array|null Returns a multidimensional array or `null` if `$key` is invalid.
 	 */
@@ -133,7 +144,7 @@ class DUP_Util
 	}
 
 	/**
-     * PHP_SAPI for fcgi requires a data flush of at least 256
+     * PHP_SAPI for FCGI requires a data flush of at least 256
      * bytes every 40 seconds or else it forces a script halt
      *
      * @return string A series of 256 space characters
@@ -146,9 +157,9 @@ class DUP_Util
     }
 
     /**
-     * Returns the wp-snapshot url
+     * Returns the wp-snapshot URL
      *
-     * @return string The full url of the duplicators snapshot storage directory
+     * @return string The full URL of the duplicators snapshot storage directory
      */
     public static function snapshotURL()
     {
@@ -156,7 +167,7 @@ class DUP_Util
     }
 
     /**
-     * Returns the last N lines of a file. equivalent to tail command
+     * Returns the last N lines of a file. Equivalent to tail command
      *
      * @param string $filepath The full path to the file to be tailed
      * @param int $lines The number of lines to return with each tail call
@@ -165,7 +176,6 @@ class DUP_Util
      */
     public static function tailFile($filepath, $lines = 2)
     {
-
         // Open file
         $f = @fopen($filepath, "rb");
         if ($f === false) return false;
@@ -209,21 +219,6 @@ class DUP_Util
     }
 
     /**
-     * Runs the APC cache to pre-cache the php files
-     *
-     * @returns bool True if all files where cached
-     */
-    public static function runAPC()
-    {
-        if (function_exists('apc_compile_file')) {
-            $file01 = @apc_compile_file(DUPLICATOR_PLUGIN_PATH."duplicator.php");
-            return ($file01);
-        } else {
-            return false;
-        }
-    }
-
-    /**
      * Display human readable byte sizes
      *
      * @param int $size    The size in bytes
@@ -246,7 +241,7 @@ class DUP_Util
     /**
      * Makes path safe for any OS
      *      Paths should ALWAYS READ be "/"
-     *          uni: /home/path/file.xt
+     *          uni: /home/path/file.txt
      *          win:  D:/home/path/file.txt
      *
      * @param string $path		The path to make safe
@@ -304,7 +299,7 @@ class DUP_Util
      * @param string $path The full path to a system directory
      *
      * @return array of all files in that path
-     * 
+     *
      * Notes:
      * 	- Avoid using glob() as GLOB_BRACE is not an option on some operating systems
      * 	- Pre PHP 5.3 DirectoryIterator will crash on unreadable files
@@ -320,7 +315,6 @@ class DUP_Util
 			return $files;
 
 		} catch (Exception $exc) {
-
 			$result = array();
 			$files = @scandir($path);
 			if (is_array($files)) {
@@ -426,6 +420,32 @@ class DUP_Util
         return false;
     }
 
+		 /**
+     * Wrap to prevent malware scanners from reporting false/positive
+     * Switched from our old method to avoid WordFence reporting a false positive
+     *
+     * @param string $string The string to decrypt i.e. base64_decode
+     *
+     * @return string Returns the string base64 decoded
+     */
+    public static function installerUnscramble($string)
+    {
+        return base64_decode($string);
+    }
+
+	/**
+     * Wrap to prevent malware scanners from reporting false/positive
+     * Switched from our old method to avoid WordFence reporting a false positive
+     *
+     * @param string $string The string to decrypt i.e. base64_encode
+     *
+     * @return string Returns the string base64 encode
+     */
+    public static function installerScramble($string)
+    {
+        return base64_encode($string);
+    }
+
     /**
      * Does the current user have the capability
      *
@@ -482,32 +502,6 @@ class DUP_Util
         }
     }
 
-	 /**
-     * Wrap to prevent malware scanners from reporting false/positive
-     * Switched from our old method to avoid WordFence reporting a false positive
-     *
-     * @param string $string The string to decrypt i.e. base64_decode
-     *
-     * @return string Returns the string base64 decoded
-     */
-    public static function installerUnscramble($string)
-    {
-        return base64_decode($string);
-    }
-
-	/**
-     * Wrap to prevent malware scanners from reporting false/positive
-     * Switched from our old method to avoid WordFence reporting a false positive
-     *
-     * @param string $string The string to decrypt i.e. base64_encode
-     *
-     * @return string Returns the string base64 encode
-     */
-    public static function installerScramble($string)
-    {
-        return base64_encode($string);
-    }
-
     /**
      * Creates the snapshot directory if it doesn't already exist
      *
@@ -519,19 +513,28 @@ class DUP_Util
         $path_ssdir  = DUP_Util::safePath(DUPLICATOR_SSDIR_PATH);
         $path_plugin = DUP_Util::safePath(DUPLICATOR_PLUGIN_PATH);
 
-        //--------------------------------
-        //CHMOD DIRECTORY ACCESS
-        //wordpress root directory
-        @chmod($path_wproot, 0755);
+        if (!file_exists($path_ssdir)) {
+            $old_root_perm = @fileperms($path_wproot);
 
-        //snapshot directory
-        @mkdir($path_ssdir, 0755);
-        @chmod($path_ssdir, 0755);
+            //--------------------------------
+            //CHMOD DIRECTORY ACCESS
+            //wordpress root directory
+            @chmod($path_wproot, 0755);
 
-        //snapshot tmp directory
+            //snapshot directory
+            @mkdir($path_ssdir, 0755);
+            @chmod($path_ssdir, 0755);
+
+            // restore original root perms
+            @chmod($path_wproot, $old_root_perm );
+        }
+
         $path_ssdir_tmp = $path_ssdir.'/tmp';
-        @mkdir($path_ssdir_tmp, 0755);
-        @chmod($path_ssdir_tmp, 0755);
+        if (!file_exists($path_ssdir_tmp)) {
+            //snapshot tmp directory
+            @mkdir($path_ssdir_tmp, 0755);
+            @chmod($path_ssdir_tmp, 0755);
+        }
 
         //plugins dir/files
         @chmod($path_plugin.'files', 0755);
@@ -539,38 +542,51 @@ class DUP_Util
         //--------------------------------
         //FILE CREATION
         //SSDIR: Create Index File
-        $ssfile = @fopen($path_ssdir.'/index.php', 'w');
-        @fwrite($ssfile,
-                '<?php error_reporting(0);  if (stristr(php_sapi_name(), "fcgi")) { $url  =  "http://" . $_SERVER["HTTP_HOST"]; header("Location: {$url}/404.html");} else { header("HTTP/1.1 404 Not Found", true, 404);} exit(); ?>');
-        @fclose($ssfile);
+        $fileName = $path_ssdir.'/index.php';
+        if (!file_exists($fileName)) {
+            $ssfile = @fopen($fileName, 'w');
+            @fwrite($ssfile,
+                    '<?php error_reporting(0);  if (stristr(php_sapi_name(), "fcgi")) { $url  =  "http://" . $_SERVER["HTTP_HOST"]; header("Location: {$url}/404.html");} else { header("HTTP/1.1 404 Not Found", true, 404);} exit(); ?>');
+            @fclose($ssfile);
+        }
 
         //SSDIR: Create token file in snapshot
-        $tokenfile = @fopen($path_ssdir.'/dtoken.php', 'w');
-        @fwrite($tokenfile,
-                '<?php error_reporting(0);  if (stristr(php_sapi_name(), "fcgi")) { $url  =  "http://" . $_SERVER["HTTP_HOST"]; header("Location: {$url}/404.html");} else { header("HTTP/1.1 404 Not Found", true, 404);} exit(); ?>');
-        @fclose($tokenfile);
+        $fileName = $path_ssdir.'/dtoken.php';
+        if (!file_exists($fileName)) {
+            $tokenfile = @fopen($fileName, 'w');
+            @fwrite($tokenfile,
+                    '<?php error_reporting(0);  if (stristr(php_sapi_name(), "fcgi")) { $url  =  "http://" . $_SERVER["HTTP_HOST"]; header("Location: {$url}/404.html");} else { header("HTTP/1.1 404 Not Found", true, 404);} exit(); ?>');
+            @fclose($tokenfile);
+        }
 
         //SSDIR: Create .htaccess
         $storage_htaccess_off = DUP_Settings::Get('storage_htaccess_off');
+        $fileName = $path_ssdir.'/.htaccess';
         if ($storage_htaccess_off) {
-            @unlink($path_ssdir.'/.htaccess');
-        } else {
-            $htfile   = @fopen($path_ssdir.'/.htaccess', 'w');
+            @unlink($fileName);
+        } else if (!file_exists($fileName)) {
+            $htfile   = @fopen($fileName, 'w');
             $htoutput = "Options -Indexes";
             @fwrite($htfile, $htoutput);
             @fclose($htfile);
         }
 
         //SSDIR: Robots.txt file
-        $robotfile = @fopen($path_ssdir.'/robots.txt', 'w');
-        @fwrite($robotfile, "User-agent: * \nDisallow: /".DUPLICATOR_SSDIR_NAME.'/');
-        @fclose($robotfile);
+        $fileName = $path_ssdir.'/robots.txt';
+        if (!file_exists($fileName)) {
+            $robotfile = @fopen($fileName, 'w');
+            @fwrite($robotfile, "User-agent: * \nDisallow: /".DUPLICATOR_SSDIR_NAME.'/');
+            @fclose($robotfile);
+        }
 
         //PLUG DIR: Create token file in plugin
-        $tokenfile2 = @fopen($path_plugin.'installer/dtoken.php', 'w');
-        @fwrite($tokenfile2,
+        $fileName = $path_plugin.'installer/dtoken.php';
+        if (!file_exists($fileName)) {
+            $tokenfile2 = @fopen($fileName, 'w');
+            @fwrite($tokenfile2,
                 '<?php @error_reporting(0); @require_once("../../../../wp-admin/admin.php"); global $wp_query; $wp_query->set_404(); header("HTTP/1.1 404 Not Found", true, 404); header("Status: 404 Not Found"); @include(get_template_directory () . "/404.php"); ?>');
-        @fclose($tokenfile2);
+            @fclose($tokenfile2);
+        }
     }
 
     /**
@@ -604,6 +620,16 @@ class DUP_Util
         return $filepath;
     }
 
+    /**
+     * Is the server PHP 5.3 or better
+     *
+     * @return  bool    Returns true if the server PHP 5.3 or better
+     */
+    public static function PHP53()
+    {
+        return version_compare(PHP_VERSION, '5.3.2', '>=');
+    }
+
 	/**
      * Returns an array of the WordPress core tables.
      *
@@ -626,13 +652,14 @@ class DUP_Util
 			"{$wpdb->prefix}usermeta",
 			"{$wpdb->prefix}users");
     }
-	
-    /**
-     * Finds if its a valid executable or not
-     * @param type $exe A non zero length executable path to find if that is executable or not.
-     * @param type $expectedValue expected value for the result
-     * @return boolean
-     */
+
+   /**
+    * Finds if its a valid executable or not
+    * 
+    * @param type $exe A non zero length executable path to find if that is executable or not.
+    * @param type $expectedValue expected value for the result
+    * @return boolean
+    */
     public static function isExecutable($cmd)
     {
         if (strlen($cmd) < 1) return false;
@@ -654,14 +681,57 @@ class DUP_Util
         return false;
     }
 
+	/**
+	 * Display human readable byte sizes
+	 *
+	 * @param string $size	The size in bytes
+	 *
+	 * @return string Human readable bytes such as 50MB, 1GB
+	 */
+	public static function readableByteSize($size)
+	{
+		try {
+			$units = array('B', 'KB', 'MB', 'GB', 'TB');
+			for ($i = 0; $size >= 1024 && $i < 4; $i++)
+				$size /= 1024;
+			return round($size, 2).$units[$i];
+		} catch (Exception $e) {
+			return "n/a";
+		}
+    }
+
+	public static function getTablePrefix() {
+        global $wpdb;
+        $tablePrefix = (is_multisite() && is_plugin_active_for_network('duplicator/duplicator.php')) ? $wpdb->base_prefix : $wpdb->prefix;
+        return $tablePrefix;
+    }
+
     /**
-     * Is the server PHP 5.3 or better
+     * return ini disable functions array
      *
-     * @return  bool    Returns true if the server PHP 5.3 or better
+     * @return array
      */
-    public static function PHP53()
-    {
-        return version_compare(PHP_VERSION, '5.3.2', '>=');
+    public static function getIniDisableFuncs() {
+        if (is_null(self::$iniDisableFuncs)) {
+            $tmpFuncs = ini_get ( 'disable_functions' );
+            $tmpFuncs = explode(',',$tmpFuncs);
+            self::$iniDisableFuncs = array();
+            foreach ($tmpFuncs as $cFunc) {
+                self::$iniDisableFuncs[] = trim($cFunc);
+            }
+        }
+
+        return self::$iniDisableFuncs;
+    }
+
+    /**
+     * Check if functione exists and isn't in ini disable_functions
+     *
+     * @param string $function_name
+     * @return bool
+     */
+    public static function isIniFunctionEnalbe($function_name) {
+        return function_exists($function_name) && !in_array($function_name, self::getIniDisableFuncs());
     }
 }
 DUP_Util::init();

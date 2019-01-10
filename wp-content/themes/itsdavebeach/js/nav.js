@@ -9,6 +9,7 @@ ItsDaveBeach.Nav = (function() {
         $hamburger.addEventListener('click', function() {
             $hamburger.classList.toggle('is-active');
         });
+
     };
 
     return {
