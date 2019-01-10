@@ -1,0 +1,48 @@
+.btn {
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+
+    margin: 1em;
+    border: none;
+    min-width: 150px;
+    max-width: 250px;
+    padding: 1em 2em;
+
+    background-color: $colour__dark-grey;
+    backface-visibility: hidden;
+    cursor: pointer;
+
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $colour__white;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 100%;
+
+        transform: scale3d(1, 2, 1);
+        transform-origin: 100% 50%;
+
+        transition: transform 0.3s, opacity 0.3s;
+        transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+
+        background: $colour__slightly-lost-red;
+
+        margin: -15px 0 0 1px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover::before {
+        transform: scale3d(9, 9, 1);
+    }
+}

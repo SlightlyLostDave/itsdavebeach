@@ -27,7 +27,7 @@
     }
 }
 
-.marquee__title {
+.marquee__text {
     position: absolute;
     z-index: 2;
     top: 15%;
@@ -46,5 +46,9 @@
 
         font: setStyle($fonts, $selectedFont, secondary);
         color: $colour__white;
+    }
+
+    .btn {
+        margin-left: 0;
     }
 }
