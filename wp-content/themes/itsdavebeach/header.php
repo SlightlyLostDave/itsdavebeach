@@ -40,4 +40,17 @@
 		</button>
 	</header>
 
+	<!-- Loading Spinner -->
+	<div class="loading">
+		<div class="loading__text">
+			<div class="loading__text__letter">L</div>
+			<div class="loading__text__letter">O</div>
+			<div class="loading__text__letter">A</div>
+			<div class="loading__text__letter">D</div>
+			<div class="loading__text__letter">I</div>
+			<div class="loading__text__letter">N</div>
+			<div class="loading__text__letter">G</div>
+		</div>
+	</div>
+
 	<main id="content">

@@ -12,8 +12,7 @@
 ?>
 
     </main><!-- #content -->
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    
     <?php wp_footer(); ?>
 </body>
 </html>
