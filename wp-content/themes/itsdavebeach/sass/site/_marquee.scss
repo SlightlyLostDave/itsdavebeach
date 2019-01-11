@@ -47,10 +47,11 @@
 .marquee__text {
     position: absolute;
     z-index: 2;
-    top: 15%;
+    bottom: 13%;
 
-    width: 870px;
-    padding: 0 0 0 21%;
+    width: 580px;
+    box-sizing: content-box;
+    padding: 0 0 0 20%;
 
     .heading-1 {
         font: setStyle($fonts, $selectedFont, primary);

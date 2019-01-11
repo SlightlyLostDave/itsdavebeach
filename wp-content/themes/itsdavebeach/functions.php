@@ -81,6 +81,8 @@ function itsdavebeach_scripts() {
 
 	if ( is_home() ) {
 		wp_enqueue_script( 'itsdavebeach-home', get_template_directory_uri() . '/js/home.js', null, 1.0, true);
+	} else {
+		wp_enqueue_script( 'itsdavebeach-content-page', get_template_directory_uri() . '/js/content-page.js', null, 1.0, true);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'itsdavebeach_scripts' );

@@ -30,22 +30,25 @@ get_header();
     <div class="title-block stage">
 
         <!-- About Title Card -->
-        <div class="title-block__wrapper" id="title-block__about" data-anchor-target="#about">
-            <div class="title-block__bg"></div>
-            <div class="title-block__text">About Me</div>
-        </div> <!-- end About Title Card -->
+<?php
+        set_query_var( 'title-block__slug', 'about' );
+        set_query_var( 'title-block__text', 'About Me' );
+        get_template_part( 'template-parts/title-block' );
+?>
 
         <!-- Résumé Title Card -->
-        <div class="title-block__wrapper" id="title-block__resume" data-anchor-target="#resume">
-            <div class="title-block__bg"></div>
-            <div class="title-block__text">Résumé</div>
-        </div> <!-- end Résumé Title Card -->
+<?php
+        set_query_var( 'title-block__slug', 'resume' );
+        set_query_var( 'title-block__text', 'Résumé' );
+        //get_template_part( 'template-parts/title-block' );
+?>
 
-        <!-- Résumé Title Card -->
-        <div class="title-block__wrapper" id="title-block__resume" data-anchor-target="#resume">
-            <div class="title-block__bg"></div>
-            <div class="title-block__text">Résumé</div>
-        </div> <!-- end Résumé Title Card -->
+        <!-- Skills Title Card -->
+<?php
+        set_query_var( 'title-block__slug', 'skills' );
+        set_query_var( 'title-block__text', 'Skills' );
+        //get_template_part( 'template-parts/title-block' );
+?>
 
     </div>
     
