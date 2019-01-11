@@ -5,7 +5,6 @@ var ItsDaveBeach = (function(name) {
 ItsDaveBeach.Home = (function() {
     var setInitialState = function() {
         initTheme();
-        initParallax();
     };
 
     var initTheme = function() {
@@ -32,8 +31,6 @@ ItsDaveBeach.Home = (function() {
             }, 500);
         };
     };
-
-    var initParallax = function() {};
 
     return {
         init: function() {
