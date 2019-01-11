@@ -15,7 +15,7 @@ get_header();
 ?>
 
     <!-- Marquee -->
-    <section id="marquee">
+    <section id="marquee" class="stage">
         <div class="marquee__slide">
             <div class="marquee__text">
                 <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
@@ -25,15 +25,15 @@ get_header();
         </div>
     </section>
 
-    <div class="title-block">
-
+    <div class="title-block stage">
+        asdfasdf
     </div>
     
-    <div class="content-block">
+    <div class="content-block stage">
 
         <!-- About -->
         <section id="about">
-            
+            asdfasdf
         </section>
 
         <!-- Résumé -->

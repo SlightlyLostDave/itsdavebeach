@@ -74,5 +74,15 @@ dd {
     }
 }
 
+.stage {
+    opacity: 0;
+
+    transition: opacity 0.9s ease;
+
+    &.is-visible {
+        opacity: 1;
+    }
+}
+
 @import 'buttons';
 @import 'loading';

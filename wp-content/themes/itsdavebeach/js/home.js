@@ -20,9 +20,17 @@ ItsDaveBeach.Home = (function() {
                     .classList.toggle('is-visible');
 
                 setTimeout(function() {
-
                     // This is the stuff that was in the contanimshow() function
-                    
+
+                    setTimeout(function() {
+                        var blocks = document.querySelectorAll('.stage');
+
+                        Array.prototype.forEach.call(blocks, function(el, i) {
+                            setTimeout(function() {
+                                el.classList.toggle('is-visible');
+                            }, 480);
+                        });
+                    }, 250);
                 }, 500);
             }, 500);
         };
