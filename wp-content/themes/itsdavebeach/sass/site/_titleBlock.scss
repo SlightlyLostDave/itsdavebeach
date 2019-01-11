@@ -9,3 +9,73 @@
     width: 40%;
     height: 100%;
 }
+
+.title-block__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 100%;
+}
+
+.title-block__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: rgba(0, 0, 0, 0.3);
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.title-block__text {
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0 auto 50px;
+    padding: 0.5em;
+
+    background: $colour__dark-grey;
+
+    font: setStyle($fonts, $selectedFont, primary);
+    font-size: 44pt;
+    letter-spacing: 2px;
+    text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
+    color: $colour__white;
+}
+
+/*--------------------------------------------------------------
+# Section backgrounds
+--------------------------------------------------------------*/
+#title-block__about .title-block__bg {
+    background-image: url('media/content/title-cards/about.jpg');
+}
+
+#title-block__resume .title-block__bg {
+    background-image: url('media/content/title-cards/resume.jpg');
+}
+
+#title-block__skills .title-block__bg {
+    background-image: url('media/content/title-cards/skills.jpg');
+}

@@ -28,10 +28,25 @@ get_header();
     </section>
 
     <div class="title-block stage">
-        <div class="title-block__wrapper">
+
+        <!-- About Title Card -->
+        <div class="title-block__wrapper" id="title-block__about" data-anchor-target="#about">
             <div class="title-block__bg"></div>
-            <div class="title-block__text"></div>
-        </div>
+            <div class="title-block__text">About Me</div>
+        </div> <!-- end About Title Card -->
+
+        <!-- Résumé Title Card -->
+        <div class="title-block__wrapper" id="title-block__resume" data-anchor-target="#resume">
+            <div class="title-block__bg"></div>
+            <div class="title-block__text">Résumé</div>
+        </div> <!-- end Résumé Title Card -->
+
+        <!-- Résumé Title Card -->
+        <div class="title-block__wrapper" id="title-block__resume" data-anchor-target="#resume">
+            <div class="title-block__bg"></div>
+            <div class="title-block__text">Résumé</div>
+        </div> <!-- end Résumé Title Card -->
+
     </div>
     
     <div class="content-block stage">

@@ -19,26 +19,16 @@ ItsDaveBeach.Home = (function() {
 
             // Hide the loading spinner
             document.querySelector('.loading').classList.toggle('is-hidden');
+            document.getElementById('content').classList.toggle('is-visible');
 
-            // Show the main content
             setTimeout(function() {
-                document
-                    .getElementById('content')
-                    .classList.toggle('is-visible');
+                var blocks = document.querySelectorAll('.stage');
 
-                setTimeout(function() {
-                    // This is the stuff that was in the contanimshow() function
-
+                Array.prototype.forEach.call(blocks, function(el, i) {
                     setTimeout(function() {
-                        var blocks = document.querySelectorAll('.stage');
-
-                        Array.prototype.forEach.call(blocks, function(el, i) {
-                            setTimeout(function() {
-                                el.classList.toggle('is-visible');
-                            }, 480);
-                        });
-                    }, 250);
-                }, 500);
+                        el.classList.toggle('is-visible');
+                    }, 480);
+                });
             }, 500);
         };
     };

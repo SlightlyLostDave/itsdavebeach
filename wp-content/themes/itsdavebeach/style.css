@@ -636,6 +636,7 @@ dd {
 #marquee {
   position: relative;
   z-index: 4;
+  opacity: 1;
   overflow: hidden;
   width: 100%;
   height: 100%; }
@@ -653,7 +654,7 @@ dd {
   left: 0;
   right: 0;
   height: 100vh;
-  background: url("media/content/home/marquee/1.jpg") center center/cover; }
+  background: url("media/content/home/marquee/3.jpg") center center/cover; }
   .marquee__slide::after {
     content: '';
     position: absolute;
@@ -689,6 +690,57 @@ dd {
   opacity: 0;
   width: 40%;
   height: 100%; }
+
+.title-block__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%; }
+
+.title-block__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center; }
+  .title-block__bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%; }
+
+.title-block__text {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 50px;
+  padding: 0.5em;
+  background: #1a1a1d;
+  font: 70pt "Josefin Slab", serif;
+  font-size: 44pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5f1f2; }
+
+/*--------------------------------------------------------------
+# Section backgrounds
+--------------------------------------------------------------*/
+#title-block__about .title-block__bg {
+  background-image: url("media/content/title-cards/about.jpg"); }
+
+#title-block__resume .title-block__bg {
+  background-image: url("media/content/title-cards/resume.jpg"); }
+
+#title-block__skills .title-block__bg {
+  background-image: url("media/content/title-cards/skills.jpg"); }
 
 .content-block {
   position: relative;
