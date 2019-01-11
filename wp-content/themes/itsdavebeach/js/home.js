@@ -10,6 +10,13 @@ ItsDaveBeach.Home = (function() {
 
     var initTheme = function() {
         window.onload = function() {
+            var s = skrollr.init();
+            s.destroy();
+            skrollr.init({
+                forceHeight: !1,
+                easing: 'outCubic'
+            });
+
             // Hide the loading spinner
             document.querySelector('.loading').classList.toggle('is-hidden');
 
@@ -35,6 +42,8 @@ ItsDaveBeach.Home = (function() {
             }, 500);
         };
     };
+
+    var initParallax = function() {};
 
     return {
         init: function() {

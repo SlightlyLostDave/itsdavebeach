@@ -75,6 +75,7 @@ add_action( 'after_setup_theme', 'itsdavebeach_setup' );
 function itsdavebeach_scripts() {
 	wp_enqueue_style( 'itsdavebeach-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'skrollr', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', null, '0.6.30', true );
 	wp_enqueue_script( 'itsdavebeach-core', get_template_directory_uri() . '/js/core.js', null, 1.0, true);
 	wp_enqueue_script( 'itsdavebeach-nav', get_template_directory_uri() . '/js/nav.js', null, 1.0, true);
 

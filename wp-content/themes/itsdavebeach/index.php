@@ -16,11 +16,13 @@ get_header();
 
     <!-- Marquee -->
     <section id="marquee" class="stage">
-        <div class="marquee__slide">
-            <div class="marquee__text">
-                <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
-                <h2 class="heading-2">Full-stack developer with a passion for immersive experiences and blazing-fast code</h2>
-                <button class="btn btn-primary"><span>Let&rsquo;s Go</span></button>
+        <div class="marquee__wrapper" data-top-bottom="transform: translateY(250px);" data-bottom-top="transform: translateY(-250px);">
+            <div class="marquee__slide">
+                <div class="marquee__text">
+                    <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
+                    <h2 class="heading-2">Full-stack developer with a passion for immersive experiences and blazing-fast code</h2>
+                    <button class="btn btn-primary"><span>Let&rsquo;s Go</span></button>
+                </div>
             </div>
         </div>
     </section>
