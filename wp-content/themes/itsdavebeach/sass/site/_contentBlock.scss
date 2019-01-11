@@ -1,0 +1,19 @@
+.content-block {
+    position: relative;
+    z-index: 4;
+    float: left;
+
+    width: 60%;
+    padding: 150px 0 100px;
+
+    background: $colour__white;
+}
+
+.section__container {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto;
+    max-width: 900px;
+    width: 92%;
+}
