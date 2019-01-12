@@ -10,11 +10,10 @@ get_header();
 
 <div class="title-block stage">
 
-<?php
-    set_query_var( 'title-block__slug', 'style-guide' );
-    set_query_var( 'title-block__text', 'Style Guide' );
-    get_template_part( 'template-parts/title-block' );
-?>
+    <div class="title-block__wrapper" id="title-block__style-guide">
+        <div class="title-block__bg"></div>
+        <div class="title-block__text">Style Guide</div>
+    </div>
 
 </div>
 
@@ -30,11 +29,6 @@ get_header();
         <div class="heading-4">Heading Level 4</div>
         <div class="heading-5">Heading Level 5</div>
         <div class="heading-6">Heading Level 6</div>
-
-        <h2 class="heading-2">Colours</h2>
-        <ul class="style-guide__colours">
-
-        </ul>
         
         <h2 class="heading-2">Paragraph</h2>
 A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
@@ -131,6 +125,11 @@ This is a term.
 This is the definition of that term, which both live in a dl.
 And another term.
 And it gets a definition too, which is this line.
+
+        <h2 class="heading-2">Colours</h2>
+        <ul class="style-guide__colours">
+
+        </ul>
 
         <h2 class="heading-2">Table</h2>
 

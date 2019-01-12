@@ -25,13 +25,13 @@
 
 	<header>
 		<nav>
-			<?php
-				wp_nav_menu( array(
-					'menu_class' => 'main-menu',
-					'container' => false,
-					'theme_location' => 'primary-menu',
-				) );
-			?>
+			<ul id="main-menu" class="main-menu">
+				<li class="main-menu__menu-item"><a href="/">Home</a></li>
+				<li class="main-menu__menu-item"><a data-bg="about.jpg" data-text="About Me" href="#about">About</a></li>
+				<li class="main-menu__menu-item"><a data-bg="resume.jpg" data-text="Résumé" href="#resume">Résumé</a></li>
+				<li class="main-menu__menu-item"><a data-bg="skills.jpg" data-text="Skills" href="#skills">Skills</a></li>
+				<li class="main-menu__menu-item"><a href="/style-guide/">Style Guide</a></li>
+			</ul>
 		</nav>
 		<button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation">
 			<span class="hamburger__box">

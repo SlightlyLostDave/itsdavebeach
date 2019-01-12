@@ -66,20 +66,8 @@
 }
 
 /*--------------------------------------------------------------
-# Section backgrounds
+# Page banners
 --------------------------------------------------------------*/
-#title-block__about .title-block__bg {
-    background-image: url('media/content/title-cards/about.jpg');
-}
-
-#title-block__resume .title-block__bg {
-    background-image: url('media/content/title-cards/resume.jpg');
-}
-
-#title-block__skills .title-block__bg {
-    background-image: url('media/content/title-cards/skills.jpg');
-}
-
-#title-block__style-guide .title-block__bg {
+#title-block__style-guide.title-block__wrapper {
     background-image: url('media/content/title-cards/style-guide.jpg');
 }

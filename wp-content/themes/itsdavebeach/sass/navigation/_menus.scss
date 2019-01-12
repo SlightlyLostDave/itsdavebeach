@@ -22,12 +22,12 @@
         opacity: 1;
         transform: translate(0, 0);
 
-        .menu-item a {
+        .main-menu__menu-item a {
             transform: translate(0, 0);
         }
     }
 
-    .menu-item {
+    .main-menu__menu-item {
         float: left;
 
         a {
@@ -178,7 +178,7 @@
 }
 
 @media screen and (max-width: $size__max-phone) {
-    .main-menu .menu-item {
+    .main-menu .main-menu__menu-item {
         float: none;
     }
 }

@@ -376,53 +376,6 @@ textarea {
 p {
   margin-bottom: 1.5em; }
 
-dfn,
-cite,
-em,
-i {
-  font-style: italic; }
-
-blockquote {
-  margin: 0 1.5em; }
-
-address {
-  margin: 0 0 1.5em; }
-
-/*
-pre {
-    background: $color__background-pre;
-    font-family: $font__pre;
-    @include font-size(0.9375);
-    line-height: $font__line-height-pre;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-    font-family: $font__code;
-    @include font-size(0.9375);
-}
-
-abbr,
-acronym {
-    border-bottom: 1px dotted $color__border-abbr;
-    cursor: help;
-}
-
-mark,
-ins {
-    background: $color__background-ins;
-    text-decoration: none;
-}
-*/
-big {
-  font-size: 125%; }
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -607,11 +560,11 @@ dd {
   .main-menu.is-active {
     opacity: 1;
     transform: translate(0, 0); }
-    .main-menu.is-active .menu-item a {
+    .main-menu.is-active .main-menu__menu-item a {
       transform: translate(0, 0); }
-  .main-menu .menu-item {
+  .main-menu .main-menu__menu-item {
     float: left; }
-    .main-menu .menu-item a {
+    .main-menu .main-menu__menu-item a {
       display: block;
       opacity: 0.7;
       transform: translate(0, -10px);
@@ -624,7 +577,7 @@ dd {
       text-decoration: none;
       letter-spacing: 2px;
       color: #f5f1f2; }
-      .main-menu .menu-item a:hover {
+      .main-menu .main-menu__menu-item a:hover {
         opacity: 1; }
 
 .hamburger {
@@ -701,7 +654,7 @@ dd {
     transition: top 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 @media screen and (max-width: 768px) {
-  .main-menu .menu-item {
+  .main-menu .main-menu__menu-item {
     float: none; } }
 /*--------------------------------------------------------------
 # Accessibility
@@ -809,18 +762,9 @@ dd {
   color: #f5f1f2; }
 
 /*--------------------------------------------------------------
-# Section backgrounds
+# Page banners
 --------------------------------------------------------------*/
-#title-block__about .title-block__bg {
-  background-image: url("media/content/title-cards/about.jpg"); }
-
-#title-block__resume .title-block__bg {
-  background-image: url("media/content/title-cards/resume.jpg"); }
-
-#title-block__skills .title-block__bg {
-  background-image: url("media/content/title-cards/skills.jpg"); }
-
-#title-block__style-guide .title-block__bg {
+#title-block__style-guide.title-block__wrapper {
   background-image: url("media/content/title-cards/style-guide.jpg"); }
 
 .content-block {

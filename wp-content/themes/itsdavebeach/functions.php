@@ -80,7 +80,10 @@ function itsdavebeach_scripts() {
 	wp_enqueue_script( 'itsdavebeach-nav', get_template_directory_uri() . '/js/nav.js', null, 1.0, true);
 
 	if ( is_home() ) {
-		wp_enqueue_script( 'itsdavebeach-home', get_template_directory_uri() . '/js/home.js', null, 1.0, true);
+		wp_enqueue_style( 'itsdavebeach-style__home', get_template_directory_uri() . '/css/home.css' );
+
+		wp_enqueue_script( 'itsdavebeach__single-page-nav', get_template_directory_uri() . '/js/single-page-nav.js', null, 1.0, true);
+		wp_enqueue_script( 'itsdavebeach__home', get_template_directory_uri() . '/js/home.js', null, 1.0, true);
 	} else {
 		wp_enqueue_script( 'itsdavebeach-content-page', get_template_directory_uri() . '/js/content-page.js', null, 1.0, true);
 	}

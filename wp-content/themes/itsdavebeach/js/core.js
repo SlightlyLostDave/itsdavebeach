@@ -1,3 +1,4 @@
+'use strict';
 var ItsDaveBeach = (function(name) {
     return name;
 })(ItsDaveBeach || {});

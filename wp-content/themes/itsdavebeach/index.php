@@ -29,6 +29,11 @@ get_header();
 
     <div class="title-block stage">
 
+        <div class="title-block__wrapper" id="title-block__<?php echo get_query_var( 'title-block__slug', 1 ); ?>">
+            <div class="title-block__bg"></div>
+            <div class="title-block__text"><?php echo get_query_var( 'title-block__text', 1 ); ?></div>
+        </div>
+
         <!-- About Title Card -->
 <?php
         set_query_var( 'title-block__slug', 'about' );
@@ -40,14 +45,14 @@ get_header();
 <?php
         set_query_var( 'title-block__slug', 'resume' );
         set_query_var( 'title-block__text', 'Résumé' );
-        //get_template_part( 'template-parts/title-block' );
+        get_template_part( 'template-parts/title-block' );
 ?>
 
         <!-- Skills Title Card -->
 <?php
         set_query_var( 'title-block__slug', 'skills' );
         set_query_var( 'title-block__text', 'Skills' );
-        //get_template_part( 'template-parts/title-block' );
+        get_template_part( 'template-parts/title-block' );
 ?>
 
     </div>
@@ -64,14 +69,14 @@ get_header();
         <!-- Résumé -->
         <section id="resume">
             <div class="section__container">
-                
+                <h1 class="heading-1">Résumé</h1>
             </div>
         </section>
 
         <!-- Skills -->
         <section id="skills">
             <div class="section__container">
-                
+                <h1 class="heading-1">Skills</h1>
             </div>
         </section>
 
