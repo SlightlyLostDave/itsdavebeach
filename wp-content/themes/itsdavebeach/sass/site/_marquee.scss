@@ -55,6 +55,7 @@
 
     .heading-1 {
         font: setStyle($fonts, $selectedFont, primary);
+        font-size: 70pt;
         text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
         color: $colour__white;
     }

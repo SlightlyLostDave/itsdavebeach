@@ -1,2 +1,4 @@
 .heading-1 {
+    font: setStyle($fonts, $selectedFont, primary);
+    text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
 }
