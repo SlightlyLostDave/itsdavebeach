@@ -23,16 +23,27 @@ get_header();
         
         <h1 class="heading-1">Style Guide</h1>
 
+        <h2 class="heading-2">Headings</h2>
+        <div class="heading-1">Heading level 1</div>
+        <div class="heading-2">Heading level 2</div>
+        <div class="heading-3">Heading Level 3</div>
+        <div class="heading-4">Heading Level 4</div>
+        <div class="heading-5">Heading Level 5</div>
+        <div class="heading-6">Heading Level 6</div>
+
         <h2 class="heading-2">Colours</h2>
         <ul class="style-guide__colours">
 
         </ul>
+        
+        <h2 class="heading-2">Paragraph</h2>
+A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
+
+A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
 
         <h2 class="heading-2">Fonts</h2>
 
-
-
-        Primary Font: "Proxima Nova", sans-serif;
+Primary Font: "Proxima Nova", sans-serif;
 
 Primary Font italic: "Proxima Nova", sans-serif;
 
@@ -44,22 +55,8 @@ Secondary Font italic: Georgia, sans-serif;
 
 Monospace Font: "Menlo for Powerline", "Menlo", Consolas, Courier, monospace;
 
-TITLE FONT: "HEEBO", "LEAGUE GOTHIC", SANS-SERIF;
+        <h2 class="heading-2">Inline Elements</h2>
 
-        <h2 class="heading-2">Headings</h2>
-        <p class="heading-1">Heading level 1</p>
-        <p class="heading-2">Heading level 2</p>
-
-Heading Level 3
-Heading Level 4
-Heading Level 5
-Heading Level 6
-PARAGRAPH
-A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
-
-A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
-
-INLINE ELEMENTS
 This is a text link
 
 Strong is used to indicate strong importance
@@ -102,22 +99,23 @@ This is sample output from a computer program
 
 The variable element, such as x = y
 
-BLOCKQUOTE
-A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.
+        <h2 class="heading-2">Blockquote</h2>
 
-BLOCKQUOTE WITH CITATION
 A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.
 
 Quote Source
 
-UNORDERED LIST
+        <h2 class="heading-2">Unordered List</h2>
+
 This is a list item in an unordered list
 An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line.
 Lists can be nested inside of each other
 This is a nested list item
 This is another nested list item in an unordered list
 This is the last list item
-ORDERED LIST
+
+        <h2 class="heading-2">Ordered List</h2>
+
 This is a list item in an ordered list
 An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.
 Lists can be nested inside of each other
@@ -125,7 +123,8 @@ This is a nested list item
 This is another nested list item in an ordered list
 This is the last list item
 
-DEFINITION LIST
+        <h2 class="heading-2">Definition List</h2>
+
 Definition List
 A number of connected items or names written or printed consecutively, typically one below the other.
 This is a term.
@@ -133,7 +132,8 @@ This is the definition of that term, which both live in a dl.
 And another term.
 And it gets a definition too, which is this line.
 
-TABLE
+        <h2 class="heading-2">Table</h2>
+
 Heading A	Heading B	Heading C
 Cell A-1	Cell B-1	Cell C-1
 Cell A-2	Cell B-2	Cell C-2
@@ -142,6 +142,7 @@ Cell A-4	Cell B-4	Cell C-4
 Cell A-5	Cell B-5	Cell C-5
 Foot A	Foot B	Foot C
 
+        <h2 class="heading-2">Code Block</h2>
 CODE BLOCK
 @function strip-unit($number) {
     @if not $number {
@@ -183,23 +184,25 @@ formatDate: function(date) {
     let year = date.getFullYear();
     return `${day} ${months[monthIndex]} ${year}`;
 }
+
+        <h2 class="heading-2">Image</h2>
 FIGURE
  FIGURE WITH CAPTION
  
 Sintra, Portugal skyline by  me
 VIDEO
 
+        <h2 class="heading-2">Buttons</h2>
 BUTTONS
 BUTTONS LIST
+
+        <h2 class="heading-2">Form Elements</h2>
 TEXT INPUT
 
 HORIZONTAL RULE
 
+        <h2 class="heading-2">Icons</h2>
 ICONS
-
-
-
-
 
     </div>
 </div>

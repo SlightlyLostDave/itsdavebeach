@@ -2,3 +2,30 @@
     font: setStyle($fonts, $selectedFont, primary);
     text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
 }
+
+.heading-2 {
+    font: setStyle($fonts, $selectedFont, secondary);
+    text-transform: setStyle($fonts, $selectedFont, secondaryTextTransform);
+}
+
+.heading-3 {
+    font-size: 16pt;
+    text-transform: uppercase;
+}
+
+.heading-4 {
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+.heading-5 {
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.heading-6 {
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}

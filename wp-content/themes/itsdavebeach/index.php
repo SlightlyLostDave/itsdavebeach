@@ -57,27 +57,21 @@ get_header();
         <!-- About -->
         <section id="about">
             <div class="section__container">
-                <p>Sea Legs pirate aye dead men tell no tales hands rutters yard furl killick poop deck. Spanish Main to go on account overhaul yardarm skysail clipper quarter scourge of the seven seas flogging tack. Man-of-war smartly Jack Tar Shiver me timbers nipper trysail hands boatswain league jib.<p>
-                <p>Lanyard careen grapple weigh anchor square-rigged booty topgallant schooner yard log. Barkadeer aft holystone run a shot across the bow grog reef hornswaggle avast schooner pinnace. Haul wind pillage Nelsons folly ho gunwalls chase guns code of conduct gibbet salmagundi lookout.</p>
-                <p>Barkadeer six pounders galleon loaded to the gunwalls sutler Jack Tar grapple jib snow landlubber or just lubber. Brethren of the Coast run a rig pressgang measured fer yer chains Spanish Main heave down nipperkin wench Sail ho holystone. Me wherry lateen sail sutler jury mast log line topgallant scurvy Blimey.</p>
+                <h1 class="heading-1">About</h1>
             </div>
         </section>
 
         <!-- Résumé -->
         <section id="resume">
             <div class="section__container">
-                <p>Sea Legs pirate aye dead men tell no tales hands rutters yard furl killick poop deck. Spanish Main to go on account overhaul yardarm skysail clipper quarter scourge of the seven seas flogging tack. Man-of-war smartly Jack Tar Shiver me timbers nipper trysail hands boatswain league jib.<p>
-                <p>Lanyard careen grapple weigh anchor square-rigged booty topgallant schooner yard log. Barkadeer aft holystone run a shot across the bow grog reef hornswaggle avast schooner pinnace. Haul wind pillage Nelsons folly ho gunwalls chase guns code of conduct gibbet salmagundi lookout.</p>
-                <p>Barkadeer six pounders galleon loaded to the gunwalls sutler Jack Tar grapple jib snow landlubber or just lubber. Brethren of the Coast run a rig pressgang measured fer yer chains Spanish Main heave down nipperkin wench Sail ho holystone. Me wherry lateen sail sutler jury mast log line topgallant scurvy Blimey.</p>
+                
             </div>
         </section>
 
         <!-- Skills -->
         <section id="skills">
             <div class="section__container">
-                <p>Sea Legs pirate aye dead men tell no tales hands rutters yard furl killick poop deck. Spanish Main to go on account overhaul yardarm skysail clipper quarter scourge of the seven seas flogging tack. Man-of-war smartly Jack Tar Shiver me timbers nipper trysail hands boatswain league jib.<p>
-                <p>Lanyard careen grapple weigh anchor square-rigged booty topgallant schooner yard log. Barkadeer aft holystone run a shot across the bow grog reef hornswaggle avast schooner pinnace. Haul wind pillage Nelsons folly ho gunwalls chase guns code of conduct gibbet salmagundi lookout.</p>
-                <p>Barkadeer six pounders galleon loaded to the gunwalls sutler Jack Tar grapple jib snow landlubber or just lubber. Brethren of the Coast run a rig pressgang measured fer yer chains Spanish Main heave down nipperkin wench Sail ho holystone. Me wherry lateen sail sutler jury mast log line topgallant scurvy Blimey.</p>
+                
             </div>
         </section>
 
