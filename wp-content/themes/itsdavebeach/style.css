@@ -713,6 +713,11 @@ dd {
   .marquee__text .btn {
     margin-left: 0; }
 
+@media screen and (max-width: 768px) {
+  .marquee__text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15%; } }
 .title-block {
   position: fixed;
   z-index: 3;

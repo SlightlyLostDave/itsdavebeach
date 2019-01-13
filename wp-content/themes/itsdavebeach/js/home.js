@@ -8,6 +8,33 @@ ItsDaveBeach.Home = (function() {
         initTheme();
     };
 
+    var addEventListeners = function() {
+        document
+            .querySelector('[data-start-btn]')
+            .addEventListener('click', function(e) {
+                ItsDaveBeach.Scroll.scroll(
+                    document.scrollingElement || document.documentElement,
+                    'scrollTop',
+                    '',
+                    0,
+                    e.currentTarget.offsetTop,
+                    200,
+                    true,
+                    function() {
+                        document.querySelector(
+                            '.title-block__bg'
+                        ).style.backgroundImage =
+                            'url(/wp-content/themes/itsdavebeach/media/content/title-cards/' +
+                            e.currentTarget.getAttribute('data-bg') +
+                            ')';
+                        document.querySelector(
+                            '.title-block__text'
+                        ).innerHTML = e.currentTarget.getAttribute('data-text');
+                    }
+                );
+            });
+    };
+
     var initTheme = function() {
         window.onload = function() {
             var s = skrollr.init();
@@ -36,6 +63,7 @@ ItsDaveBeach.Home = (function() {
     return {
         init: function() {
             setInitialState();
+            addEventListeners();
         }
     };
 })();

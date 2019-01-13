@@ -39,35 +39,27 @@ ItsDaveBeach.SinglePageNav = (function() {
         if (null !== $el) {
             clearTimer();
             setActiveLink(link.hash);
-            scroll($el, function() {
-                document.querySelector(
-                    '.title-block__bg'
-                ).style.backgroundImage =
-                    'url(/wp-content/themes/itsdavebeach/content/title-cards/' +
-                    link.getAttribute('data-bg') +
-                    '.jpg)';
-                document.querySelector(
-                    '.title-block__text'
-                ).innerHTML = link.getAttribute('data-text');
-            });
-        }
-    };
-
-    var scroll = function(el, callback) {
-        var scrollOffset = el.offsetTop,
-            interval = setInterval(function() {
-                if (scrollOffset - document.documentElement.scrollTop > 0) {
-                    document.documentElement.scrollTop += 10;
-                } else if (
-                    scrollOffset - document.documentElement.scrollTop <=
-                    0
-                ) {
-                    document.documentElement.scrollTop -= 10;
-                } else {
-                    clearInterval(interval);
-                    callback();
+            ItsDaveBeach.Scroll.scroll(
+                document.scrollingElement || document.documentElement,
+                'scrollTop',
+                '',
+                0,
+                $el.offsetTop,
+                200,
+                true,
+                function() {
+                    document.querySelector(
+                        '.title-block__bg'
+                    ).style.backgroundImage =
+                        'url(/wp-content/themes/itsdavebeach/media/content/title-cards/' +
+                        link.getAttribute('data-bg') +
+                        ')';
+                    document.querySelector(
+                        '.title-block__text'
+                    ).innerHTML = link.getAttribute('data-text');
                 }
-            }, 10);
+            );
+        }
     };
 
     var setTimer = function() {

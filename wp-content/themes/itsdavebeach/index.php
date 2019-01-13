@@ -21,7 +21,7 @@ get_header();
                 <div class="marquee__text" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(150px);">
                     <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
                     <h2 class="heading-2">Full-stack developer with a passion for immersive experiences and blazing-fast code</h2>
-                    <button class="btn btn-primary"><span>Let&rsquo;s Go</span></button>
+                    <button class="btn btn-primary" data-start-btn data-bg="about.jpg" data-text="About Me"><span>Let&rsquo;s Go</span></button>
                 </div>
             </div>
         </div>
