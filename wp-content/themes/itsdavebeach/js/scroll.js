@@ -4,10 +4,13 @@ var ItsDaveBeach = (function(name) {
 })(ItsDaveBeach || {});
 
 ItsDaveBeach.Scroll = (function() {
-    var scroll = function(el, style, unit, from, to, time, prop, callback) {
+    var scroll = function(el, style, unit, from, to, time, prop, beforeScroll) {
         if (!el) {
             return;
         }
+
+        beforeScroll();
+
         var start = new Date().getTime(),
             timer = setInterval(function() {
                 var step = Math.min(1, (new Date().getTime() - start) / time);
@@ -20,7 +23,6 @@ ItsDaveBeach.Scroll = (function() {
 
                 if (step === 1) {
                     clearInterval(timer);
-                    callback();
                 }
             }, 10);
 

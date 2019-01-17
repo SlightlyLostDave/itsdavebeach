@@ -43,9 +43,9 @@ ItsDaveBeach.SinglePageNav = (function() {
                 document.scrollingElement || document.documentElement,
                 'scrollTop',
                 '',
-                0,
-                $el.offsetTop,
-                200,
+                document.documentElement.scrollTop,
+                $el.offsetTop + window.innerHeight,
+                250,
                 true,
                 function() {
                     document.querySelector(
@@ -88,6 +88,7 @@ ItsDaveBeach.SinglePageNav = (function() {
 
         if (null !== currentSection) {
             setActiveLink(currentSection);
+            setBGAndTitle(currentSection);
         }
     };
 
@@ -111,6 +112,20 @@ ItsDaveBeach.SinglePageNav = (function() {
 
             $activeLink.classList.add('is-active');
         }
+    };
+
+    var setBGAndTitle = function(section) {
+        var $link = document.querySelector(
+                '.main-menu__menu-item a[href="' + section + '"]'
+            ),
+            sectionBG = $link.getAttribute('data-bg'),
+            sectionText = $link.getAttribute('data-text');
+
+        document.querySelector('.title-block__bg').style.backgroundImage =
+            'url(/wp-content/themes/itsdavebeach/media/content/title-cards/' +
+            sectionBG +
+            ')';
+        document.querySelector('.title-block__text').innerHTML = sectionText;
     };
 
     var getCurrentSection = function(scrollPos) {

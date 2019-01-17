@@ -12,24 +12,28 @@ ItsDaveBeach.Home = (function() {
         document
             .querySelector('[data-start-btn]')
             .addEventListener('click', function(e) {
+                var titleBG = e.currentTarget.getAttribute('data-bg'),
+                    titleText = e.currentTarget.getAttribute('data-text');
+
                 ItsDaveBeach.Scroll.scroll(
                     document.scrollingElement || document.documentElement,
                     'scrollTop',
                     '',
-                    0,
-                    e.currentTarget.offsetTop,
-                    200,
+                    document.documentElement.scrollTop,
+                    document.querySelector('#about').offsetTop +
+                        window.innerHeight,
+                    250,
                     true,
                     function() {
                         document.querySelector(
                             '.title-block__bg'
                         ).style.backgroundImage =
                             'url(/wp-content/themes/itsdavebeach/media/content/title-cards/' +
-                            e.currentTarget.getAttribute('data-bg') +
+                            titleBG +
                             ')';
                         document.querySelector(
                             '.title-block__text'
-                        ).innerHTML = e.currentTarget.getAttribute('data-text');
+                        ).innerHTML = titleText;
                     }
                 );
             });
