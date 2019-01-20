@@ -42,6 +42,8 @@ get_header();
         <section id="about">
             <div class="section__container">
                 <h1 class="heading-1">About</h1>
+
+                <p>I am a driven and inquisitive full-stack developer that combines a background in large-scale projects and team management with expertise in development with the web's leading-edge technologies to deliver on time and above expectations. I deliver award-winning websites for brands including Toyota and Lexus. My near-obsessive organizational and planning skills keeping projects on target. Always hungry to learn the next interesting technology, I am continuously learning and expanding my knowledge base.</p>
             </div>
         </section>
 
@@ -49,6 +51,8 @@ get_header();
         <section id="resume">
             <div class="section__container">
                 <h1 class="heading-1">Résumé</h1>
+
+
             </div>
         </section>
 
@@ -56,6 +60,8 @@ get_header();
         <section id="skills">
             <div class="section__container">
                 <h1 class="heading-1">Skills</h1>
+
+                
             </div>
         </section>
 
