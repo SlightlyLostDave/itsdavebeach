@@ -31,9 +31,8 @@ get_header();
         <div class="heading-6">Heading Level 6</div>
         
         <h2 class="heading-2">Paragraph</h2>
-A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
-
-A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.
+        <p>Crack tea cup loot ballast Sea Legs Barbary Coast draught warp hulk parrel boatswain. Booty jury mast to go on account boom topgallant sloop keel grapple clipper black jack. Capstan cackle fruit ahoy cable bring a spring upon her cable matey Chain Shot provost Davy Jones' Locker splice the main brace.</p>
+        <p>Strike colors red ensign Sea Legs poop deck jolly boat killick snow Buccaneer crow's nest tack. Hempen halter quarter Pieces of Eight no prey, no pay marooned mutiny boatswain tackle fore fluke. Fire ship Jack Ketch barque lanyard Corsair prow man-of-war pinnace cackle fruit Cat o'nine tails.</p>
 
         <h2 class="heading-2">Fonts</h2>
 

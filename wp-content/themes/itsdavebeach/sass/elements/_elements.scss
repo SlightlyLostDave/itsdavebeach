@@ -84,5 +84,11 @@ dd {
     }
 }
 
+footer {
+    background: $colour__medium-grey;
+
+    color: $colour__white;
+}
+
 @import 'buttons';
 @import 'loading';

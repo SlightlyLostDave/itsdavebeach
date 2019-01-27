@@ -53,4 +53,4 @@
 		</div>
 	</div>
 
-	<main id="content">
+	<div id="content">

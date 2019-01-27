@@ -9,9 +9,20 @@
  * @package It's_Dave_Beach
  */
 
-?>
+?>      
 
-    </main><!-- #content -->
+        <footer>
+            LinkedIn
+            Instagram
+            Github
+
+            <a href="mailto:me@itsdavebeach.com">me@itsdavebeach.com</a>
+
+            Dave Beach &copy;<?php echo date("Y"); ?>
+        </footer>
+
+        </div>
+    </div><!-- #content -->
     
     <?php wp_footer(); ?>
 </body>

@@ -90,3 +90,17 @@ function itsdavebeach_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'itsdavebeach_scripts' );
+
+function itsdavebeach_add_googleanalytics() { ?>
+	<script>
+		window.ga = function() {
+			ga.q.push(arguments);
+		};
+		ga.q = [];
+		ga.l = +new Date();
+		ga('create', 'UA-132742582-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<?php }
+add_action('wp_footer', 'itsdavebeach_add_googleanalytics');
