@@ -1,3 +1,5 @@
+@import 'variables/variables';
+
 .content-block section {
     padding-bottom: 50px;
 }
@@ -5,3 +7,16 @@
 /*--------------------------------------------------------------
 # Résumé
 --------------------------------------------------------------*/
+.resume__title {
+    display: inline-block;
+
+    padding: 1em 2em;
+
+    background-color: $colour__slightly-lost-red;
+
+    font-size: 10.5pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $colour__white;
+}

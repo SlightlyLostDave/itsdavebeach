@@ -43,10 +43,13 @@ get_header();
             <div class="section__container">
                 <h1 class="heading-1">About</h1>
 
+                <!--
                 Development
                 Web/Mobile
+                Aerial
                 VR/AR
                 Team Lead
+                -->
 
                 <p>I am a driven and inquisitive full-stack developer that combines a background in large-scale projects and team management with expertise in development with the web's leading-edge technologies to deliver on time and above expectations. I deliver award-winning websites for brands including Toyota and Lexus. My near-obsessive organizational and planning skills keeping projects on target. Always hungry to learn the next interesting technology, I am continuously learning and expanding my knowledge base.</p>
             </div>
@@ -170,23 +173,20 @@ get_header();
                 <h1 class="heading-1">Skills</h1>
 
                 <h2 class="heading-2">Development</h2>
-                HTML5
-                CSS (Inc. Flexbox & Grid)
+                HTML
+                CSS
                 SASS/LESS
                 Responsive
-                CSS Animation
-                JavaScript/jQuery
+                JavaScript
                 React
                 Accessibility
                 PHP
                 ASP.NET
-                Classic ASP
                 WordPress
-                Git
                 Database
-                Photoshop CC
 
                 <h2 class="heading-2">VR/AR</h2>
+                Aerial Photo/Video
                 Photogrammetry
                 3D Modeling
                 Unreal Engine

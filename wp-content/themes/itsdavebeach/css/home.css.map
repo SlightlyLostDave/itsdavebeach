@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": ";AAAA,sBAAuB;EACnB,cAAc,EAAE,IAAI;;AAGxB;;gEAEgE",
-"sources": ["../sass/home.scss"],
+"mappings": ";AAAA;;;gEAGgE;AAKhE,gEAAgE;ACNhE,sBAAuB;EACnB,cAAc,EAAE,IAAI;;AAGxB;;gEAEgE;AAChE,cAAe;EACX,OAAO,EAAE,YAAY;EAErB,OAAO,EAAE,OAAO;EAEhB,gBAAgB,EDJQ,OAAO;ECM/B,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,SAAS;EACzB,cAAc,EAAE,GAAG;EACnB,KAAK,EDPO,OAAO",
+"sources": ["../sass/variables/_colors.scss","../sass/home.scss"],
 "names": [],
 "file": "home.css"
 }

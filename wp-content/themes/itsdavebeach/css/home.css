@@ -1,9 +1,23 @@
 @charset "UTF-8";
+/*--------------------------------------------------------------
+# Colour Set options
+https://i.imgur.com/3DJ2XXq.png
+--------------------------------------------------------------*/
+/*------------------------------------------------------------*/
 .content-block section {
   padding-bottom: 50px; }
 
 /*--------------------------------------------------------------
 # Résumé
 --------------------------------------------------------------*/
+.resume__title {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #c60021;
+  font-size: 10.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f5f1f2; }
 
 /*# sourceMappingURL=home.css.map */
