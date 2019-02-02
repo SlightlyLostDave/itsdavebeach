@@ -13,11 +13,14 @@ https://i.imgur.com/3DJ2XXq.png
 .resume__title {
   display: inline-block;
   padding: 1em 2em;
-  background-color: #c60021;
+  background-color: #950606;
   font-size: 10.5pt;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #f5f1f2; }
+
+.resume__item {
+  cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */
