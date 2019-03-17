@@ -30,7 +30,7 @@
 				<li class="main-menu__menu-item"><a data-bg="about.jpg" data-text="About Me" href="#about">About</a></li>
 				<li class="main-menu__menu-item"><a data-bg="resume.jpg" data-text="Résumé" href="#resume">Résumé</a></li>
 				<li class="main-menu__menu-item"><a data-bg="skills.jpg" data-text="Skills" href="#skills">Skills</a></li>
-				<li class="main-menu__menu-item"><a href="/style-guide/">Style Guide</a></li>
+<?php if (false) { ?><li class="main-menu__menu-item"><a href="/style-guide/">Style Guide</a></li><?php } ?>
 			</ul>
 		</nav>
 		<button class="hamburger" type="button" aria-label="Menu" aria-controls="navigation">

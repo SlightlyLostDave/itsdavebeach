@@ -71,3 +71,9 @@
 #title-block__style-guide.title-block__wrapper {
     background-image: url('media/content/title-cards/style-guide.jpg');
 }
+
+@media only screen and (max-width: 767px) {
+    .title-block {
+        display: none;
+    }
+}

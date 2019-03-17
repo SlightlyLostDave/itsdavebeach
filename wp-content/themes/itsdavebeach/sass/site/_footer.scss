@@ -1,0 +1,60 @@
+@import '../fa/fontawesome.scss';
+@import '../fa/solid.scss';
+@import '../fa/brands.scss';
+
+footer {
+    padding: 40px 0;
+
+    text-align: center;
+}
+
+.contact__link {
+    margin: 0 20px 25px;
+
+    text-decoration: none;
+    color: $colour__white;
+
+    &::before {
+        font-size: 36px;
+    }
+
+    &:hover {
+        color: $colour__slightly-lost-red;
+    }
+}
+
+.contact-linkedin {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-linkedin);
+    }
+}
+
+.contact-instagram {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-instagram);
+    }
+}
+
+.contact-github {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-github);
+    }
+}
+
+.contact-email {
+    @extend %fa-icon;
+    @extend .fas;
+
+    &:before {
+        content: fa-content($fa-var-envelope);
+    }
+}

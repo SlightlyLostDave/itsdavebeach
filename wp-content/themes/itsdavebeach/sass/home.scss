@@ -1,4 +1,5 @@
 @import 'variables/variables';
+@import 'mixins/mixins';
 
 .content-block section {
     padding-bottom: 50px;
@@ -8,32 +9,79 @@
 # Résumé
 --------------------------------------------------------------*/
 .resume {
-    margin: 0;
+    @include clearfix;
+
+    position: relative;
+
+    margin: 40px auto;
     padding: 0;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 50%;
+
+        margin-left: -2px;
+        width: 4px;
+        height: 100%;
+
+        background: $colour__medium-grey;
+    }
 }
 
 .resume__title {
-    display: inline-block;
+    position: relative;
+    z-index: 2;
+    clear: both;
 
+    margin: 31px auto;
+    width: 150px;
     padding: 1em 2em;
 
     background-color: $colour__slightly-lost-red;
 
     font-size: 10.5pt;
     font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: $colour__white;
 }
 
 .resume__item {
-    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    float: left;
 
     transition: all 0.5s ease;
+
+    cursor: pointer;
 
     margin: 10px 0;
     width: 47.5%;
     padding: 20px;
 
+    font-size: 14px;
+    line-height: 21px;
     list-style: none;
+
+    &:nth-of-type(2n) {
+        float: right;
+        clear: right;
+    }
+
+    &:nth-of-type(3) {
+        margin-top: 100px;
+    }
+
+    ul {
+        margin: 5px 0;
+    }
+
+    p {
+        margin: 0;
+    }
 }

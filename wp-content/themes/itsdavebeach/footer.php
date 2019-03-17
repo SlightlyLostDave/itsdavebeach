@@ -12,13 +12,12 @@
 ?>      
 
         <footer>
-            LinkedIn
-            Instagram
-            Github
+            <a class="contact__link contact-linkedin" href="https://www.linkedin.com/in/itsdavebeach" target="_blank"></a>
+            <a class="contact__link contact-instagram" href="https://www.instagram.com/slightlylostdave/" target="_blank"></a>
+            <a class="contact__link contact-github" href="https://github.com/SlightlyLostDave" target="_blank"></a>
+            <a class="contact__link contact-email" href="mailto:info@davebeach.me"></a>
 
-            <a href="mailto:me@itsdavebeach.com">me@itsdavebeach.com</a>
-
-            Dave Beach &copy;<?php echo date("Y"); ?>
+            <p>Dave Beach &copy;<?php echo date("Y"); ?></p>
         </footer>
 
         </div>
