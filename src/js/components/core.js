@@ -1,10 +1,5 @@
-'use strict';
-var ItsDaveBeach = (function(name) {
-    return name;
-})(ItsDaveBeach || {});
-
-ItsDaveBeach.Core = (function() {
-    var ready = function(fn) {
+const core = {
+    ready: function(fn) {
         if (
             document.attachEvent
                 ? document.readyState === 'complete'
@@ -14,9 +9,7 @@ ItsDaveBeach.Core = (function() {
         } else {
             document.addEventListener('DOMContentLoaded', fn);
         }
-    };
+    }
+};
 
-    return {
-        ready: ready
-    };
-})();
+export default core;

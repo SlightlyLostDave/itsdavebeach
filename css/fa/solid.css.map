@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,UAUC;EATC,WAAW,EAAE,qBAAqB;EAClC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,kCAAwC;EAC7C,GAAG,EAAE,oSAI6D;AAGpE;IACK;EACH,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG",
-"sources": ["../../sass/fa/solid.scss"],
-"names": [],
-"file": "solid.css"
-}
