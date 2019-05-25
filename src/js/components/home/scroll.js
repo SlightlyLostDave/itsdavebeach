@@ -1,10 +1,5 @@
-'use strict';
-var ItsDaveBeach = (function(name) {
-    return name;
-})(ItsDaveBeach || {});
-
-ItsDaveBeach.Scroll = (function() {
-    var scroll = function(el, style, unit, from, to, time, prop, beforeScroll) {
+const Scroll = {
+    scroll(el, style, unit, from, to, time, prop, beforeScroll) {
         if (!el) {
             return;
         }
@@ -31,9 +26,7 @@ ItsDaveBeach.Scroll = (function() {
         } else {
             el.style[style] = from + unit;
         }
-    };
+    }
+};
 
-    return {
-        scroll: scroll
-    };
-})();
+export default Scroll;

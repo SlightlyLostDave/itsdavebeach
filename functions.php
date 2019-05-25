@@ -7,7 +7,7 @@
  * @package It's_Dave_Beach
  */
 
-if ( ! function_exists( 'itsdavebeach_setup' ) ) :
+if ( ! function_exists( 'davebeach_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'itsdavebeach_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function itsdavebeach_setup() {
+	function davebeach_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -67,12 +67,12 @@ if ( ! function_exists( 'itsdavebeach_setup' ) ) :
 		remove_action('wp_head', 'adjacent_posts_rel_link');
 	}
 endif;
-add_action( 'after_setup_theme', 'itsdavebeach_setup' );
+add_action( 'after_setup_theme', 'davebeach_setup' );
 
 /**
  * Enqueue scripts and styles.
  */
-function itsdavebeach_scripts() {
+function davebeach_scripts() {
 	wp_enqueue_style( 'itsdavebeach-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'davebeach-stylesheet', get_template_directory_uri() . '/dist/css/bundle.css', array(), '1.0.0', 'all' );
 
@@ -82,16 +82,14 @@ function itsdavebeach_scripts() {
 	if ( is_home() ) {
 		wp_enqueue_style( 'itsdavebeach-style__home', get_template_directory_uri() . '/dist/css/home.css' );
 
-		wp_enqueue_script( 'itsdavebeach__scroll', get_template_directory_uri() . '/js/scroll.js', null, 1.0, true);
-		wp_enqueue_script( 'itsdavebeach__single-page-nav', get_template_directory_uri() . '/js/single-page-nav.js', null, 1.0, true);
-		wp_enqueue_script( 'itsdavebeach__home', get_template_directory_uri() . '/js/home.js', null, 1.0, true);
+		wp_enqueue_script( 'davebeach__home', get_template_directory_uri() . '/dist/js/home.js', array('jquery'), 1.0, true);
 	} else {
 		wp_enqueue_script( 'itsdavebeach-content-page', get_template_directory_uri() . '/js/content-page.js', null, 1.0, true);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'itsdavebeach_scripts' );
+add_action( 'wp_enqueue_scripts', 'davebeach_scripts' );
 
-function itsdavebeach_add_googleanalytics() { ?>
+function davebeach_add_googleanalytics() { ?>
 	<script>
 		window.ga = function() {
 			ga.q.push(arguments);
@@ -103,4 +101,4 @@ function itsdavebeach_add_googleanalytics() { ?>
 	</script>
 	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 <?php }
-add_action('wp_footer', 'itsdavebeach_add_googleanalytics');
+add_action('wp_footer', 'davebeach_add_googleanalytics');
