@@ -1,4 +1,4 @@
-import core from './core';
+import $ from 'jquery';
 
 const addEventListeners = () => {
     var $hamburger = document.querySelector('.hamburger'),
@@ -14,4 +14,4 @@ const navInit = () => {
     addEventListeners();
 };
 
-core.ready(navInit());
+$(document).ready(navInit());
