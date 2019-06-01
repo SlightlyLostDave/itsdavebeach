@@ -41,6 +41,15 @@ footer {
     }
 }
 
+.contact-twitter {
+    @extend %fa-icon;
+    @extend .fab;
+
+    &:before {
+        content: fa-content($fa-var-twitter);
+    }
+}
+
 .contact-github {
     @extend %fa-icon;
     @extend .fab;
