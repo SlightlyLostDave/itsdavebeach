@@ -102,10 +102,10 @@ class SinglePageNav {
     }
 
     getCoords($el) {
-        const yPos = $el.getBoundingClientRect();
+        const yPos = Math.round($el.offset().top);
 
         return {
-            top: Math.round(yPos.top + document.body.scrollTop) - 70
+            top: yPos
         };
     }
 
@@ -145,7 +145,7 @@ class SinglePageNav {
             const exists = document.querySelector(hash);
 
             if (null !== exists) {
-                const coords = this.getCoords(exists);
+                const coords = this.getCoords($(hash));
 
                 if (scrollPos >= coords.top - 120) {
                     section = hash;
