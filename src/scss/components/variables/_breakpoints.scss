@@ -1,1 +1,38 @@
-$size__max-phone: 768px;
+$size__large-min: 1600px;
+$size__medium-max: 1599px;
+$size__medium-min: 1280px;
+$size__small-max: 1279px;
+$size__small-min: 768px;
+$size__phone-max: 767px;
+
+@mixin large {
+    @media only screen and (min-width: $size__large-min) { @content; }
+}
+
+@mixin medium {
+    @media only screen and (max-width: $size__medium-max) { @content; }
+}
+
+@mixin medium-only {
+    @media only screen and (min-width: $size__medium-min) and (max-width: $size__medium-max) { @content; }
+}
+
+@mixin medium-plus {
+    @media only screen and (min-width: $size__medium-min) { @content; }
+}
+
+@mixin small {
+    @media only screen and (max-width: $size__small-max) { @content; }
+}
+
+@mixin small-only {
+    @media only screen and (min-width: $size__small-min) and (max-width: $size__small-max) { @content; }
+}
+
+@mixin small-plus {
+    @media only screen and (min-width: $size__small-min) { @content; }
+}
+
+@mixin phone {
+    @media only screen and (max-width: $size__phone-max) { @content; }
+}

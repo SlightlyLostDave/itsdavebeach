@@ -53,6 +53,12 @@
     box-sizing: content-box;
     padding: 0 0 0 16%;
 
+    @include phone {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15%;
+    }
+
     .heading-1 {
         font: setStyle($fonts, $selectedFont, primary);
         font-size: 70pt;
@@ -69,13 +75,5 @@
 
     .btn {
         margin-left: 0;
-    }
-}
-
-@media screen and (max-width: $size__max-phone) {
-    .marquee__text {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 15%;
     }
 }

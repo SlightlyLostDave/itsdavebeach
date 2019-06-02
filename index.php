@@ -62,7 +62,7 @@ get_header();
 
                 <ul class="resume">
                     <li class="resume__title">Present</li>
-                    <li class="resume__item item--right">
+                    <li class="resume__item">
                         <h2 class="heading-3">Saatchi & Saatchi Canada (formerly TPM Communications)</h2>
                         <p class="heading-4">Senior Developer</p>
                         <ul>
@@ -71,6 +71,7 @@ get_header();
                             <li>Spearheaded the development and implementation of new company-wide processes to switch from waterfall to an agile development model, including the onboarding of non-technical team members</li>
                         </ul>
                         <p class="heading-5">Jun 2010 - Present</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">TunnelBear</h2>
@@ -81,6 +82,7 @@ get_header();
                             <li>Integrated ZenDesk support into the existing TunnelBear website, allowing a seamless help experience for users</li>
                         </ul>
                         <p class="heading-5">Sep 2012 - Mar 2015</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Sesame Communications</h2>
@@ -89,6 +91,7 @@ get_header();
                             <li>Build standards-compliant and efficient sites for the dental and orthodontics industry using XHTML, CSS, JavaScript, and PHP</li>
                         </ul>
                         <p class="heading-5">Sep 2009 - Aug 2010</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Blast Radius</h2>
@@ -98,6 +101,7 @@ get_header();
                             <li>Oversaw a team of interface developers in the development of a CMS to allow Scotts to manage their own web properties</li>
                         </ul>
                         <p class="heading-5">Dec 2008 - Jul 2010</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Henderson Bas</h2>
@@ -106,6 +110,7 @@ get_header();
                             <li>Created a templating system to facilitate faster development of website updates for new products, news & events for Nintendo, Molson Canadian, Coca-Cola, and Mercedes-Benz</li>
                         </ul>
                         <p class="heading-5">Sep 2008 - Dec 2008</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Boom Resource</h2>
@@ -114,6 +119,7 @@ get_header();
                             <li>Designed and developed websites for Boom Resource’s internal site and Otis Capital Mining Exploration</li>
                         </ul>
                         <p class="heading-5">Jun 2008 - Dec 2008</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Project JLM</h2>
@@ -123,6 +129,7 @@ get_header();
                             <li>Programmed client sites and both font- and back-end functionality of CMS</li>
                         </ul>
                         <p class="heading-5">May 2008 - Jul 2010</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">e-BizSoft</h2>
@@ -131,6 +138,7 @@ get_header();
                             <li>Sliced PSD files into standards-compliant XHTML/CSS</li>
                         </ul>
                         <p class="heading-5">May 2008 - Jul 2009</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">ESAB Welding & Cutting Products</h2>
@@ -139,6 +147,7 @@ get_header();
                             <li>Designed and developed websites for various ESAB Brands including PowerCut and FastTrack</li>
                         </ul>
                         <p class="heading-5">Mar 2008 - Sep 2008</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Fortify Software</h2>
@@ -147,6 +156,7 @@ get_header();
                             <li>Perform website maintenance including designing and building new pages</li>
                         </ul>
                         <p class="heading-5">Feb 2007 - Nov 2007</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__item">
                         <h2 class="heading-3">Cleanpage</h2>
@@ -155,6 +165,7 @@ get_header();
                             <li>Developed websites for local businesses and organizations</li>
                         </ul>
                         <p class="heading-5">Aug 2006 - Sep 2008</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__title">Education</li>
                     <li class="resume__item">
@@ -162,7 +173,9 @@ get_header();
                         <p class="heading-4">Information Technology</p>
                         <p>Concentration in web & game development</p>
                         <p class="heading-5">2003 - 2008</p>
+                        <span class="resume__item--arrow"></span>
                     </li>
+                    <li class="resume__end"></li>
                 </ul>
             </div>
         </section>
