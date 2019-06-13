@@ -36,7 +36,7 @@ get_header();
 
     </div>
     
-    <div class="content-block stage">
+    <div id="skrollr-body" class="content-block stage">
 
         <!-- About -->
         <section id="about">
