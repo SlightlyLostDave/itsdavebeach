@@ -63,7 +63,7 @@
         width: 47.5%;
     }
     
-    @include small {
+    @include phone {
         float: none;
         margin: 30px auto;
         width: 90%;
@@ -74,7 +74,7 @@
         float: right;
         clear: right;
 
-        @include small { float: none; }
+        @include phone { float: none; }
 
         &::after {
             @include large { left: -7.4%; }
@@ -154,7 +154,7 @@
         border-bottom: 10px solid transparent;
         border-left: 16px solid transparent;
 
-        @include small { display: none; }
+        @include phone { display: none; }
     }
 
     .heading-3 {

@@ -1,11 +1,8 @@
 #marquee {
     position: relative;
     z-index: 4;
-
     opacity: 1;
-
     overflow: hidden;
-
     width: 100%;
     height: 100%;
 }
@@ -14,7 +11,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
 }
@@ -24,22 +20,17 @@
     top: 0;
     left: 0;
     right: 0;
-
     height: 100vh;
-
     background: url('../images/content/home/marquee/3.jpg') center center / cover;
 
     &::after {
         content: '';
-
         position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
         right: 0;
-
         height: 100%;
-
         background: rgba(0, 0, 0, 0.3);
     }
 }
@@ -48,10 +39,13 @@
     position: absolute;
     z-index: 2;
     bottom: 13%;
-
     width: 580px;
     box-sizing: content-box;
     padding: 0 0 0 16%;
+
+    @include small {
+        padding-left: 13%;
+    }
 
     @include phone {
         width: 100%;
@@ -61,9 +55,11 @@
 
     .heading-1 {
         font: setStyle($fonts, $selectedFont, primary);
-        font-size: 70pt;
         text-transform: setStyle($fonts, $selectedFont, primaryTextTransform);
         color: $colour__white;
+
+        @include small-plus { font-size: 70pt; }
+        @include phone { font-size: 32px; }
     }
 
     .heading-2 {
@@ -71,6 +67,8 @@
 
         font: setStyle($fonts, $selectedFont, secondary);
         color: $colour__white;
+
+        @include phone { font-size: 12pt; }
     }
 
     .btn {
