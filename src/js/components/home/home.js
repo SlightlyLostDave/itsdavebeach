@@ -3,13 +3,7 @@ import Scroll from './scroll';
 
 const setInitialState = () => {
     window.onload = function() {
-        const s = skrollr.init();
-
-        s.destroy();
-        skrollr.init({
-            forceHeight: !1,
-            easing: 'outCubic'
-        });
+        AOS.init();
 
         // Hide the loading spinner
         document.querySelector('.loading').classList.toggle('is-hidden');
@@ -46,7 +40,7 @@ const addEventListeners = () => {
                     document.querySelector(
                         '.title-block__bg'
                     ).style.backgroundImage =
-                        'url(/wp-content/themes/itsdavebeach/dist/images/content/title-cards/' +
+                        'url(/wp-content/themes/davebeach.me/dist/images/content/title-cards/' +
                         titleBG +
                         ')';
                     document.querySelector(

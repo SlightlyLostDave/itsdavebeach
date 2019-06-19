@@ -6,21 +6,17 @@
     top: 0;
     left: 0;
     right: 0;
-
     opacity: 0;
     transform: translate(0, -100%);
-
     transition: opacity 0.2s ease;
-
     margin: 0;
-
     background: $colour__dark-grey;
-
     list-style: none;
 
     &.is-active {
         opacity: 1;
         transform: translate(0, 0);
+        box-shadow: 0 4px 3px rgba(0,0,0,0.4);
 
         .main-menu__menu-item a {
             transform: translate(0, 0);
@@ -38,11 +34,8 @@
             display: block;
             opacity: 0.7;
             transform: translate(0, -10px);
-
             transition: transform 0.2s ease;
-
             padding: 0 1.5em;
-
             font-size: 8pt;
             line-height: 60px;
             font-weight: bold;
@@ -65,14 +58,10 @@
     z-index: 100;
     top: 0;
     right: 0;
-
     display: inline-block;
-
     transition: opacity 0.15s linear;
-
     border: 0;
     padding: 15px;
-
     background-color: $colour__slightly-lost-red;
     cursor: pointer;
 
@@ -82,11 +71,9 @@
 
     &::after {
         content: '';
-
         position: absolute;
         top: 0;
         left: -60px;
-
         border-width: 60px 0 0 60px;
         border-style: solid;
         border-color: $colour__slightly-lost-red transparent transparent;
@@ -105,23 +92,18 @@
 
         .hamburger__inner {
             transform: rotate(225deg);
-
             transition-delay: 0.12s;
             transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
             &::before {
                 top: 0;
-
                 opacity: 0;
-
                 transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
             }
 
             &::after {
                 bottom: 0;
-
                 transform: rotate(-90deg);
-
                 transition: bottom 0.1s ease-out,
                     transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
             }
@@ -131,18 +113,14 @@
 
 .hamburger__box {
     position: relative;
-
     display: inline-block;
-
     width: 40px;
     height: 24px;
 }
 
 .hamburger__inner {
     top: 50%;
-
     display: block;
-
     transition-duration: 0.22s;
     transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -150,32 +128,26 @@
     &::before,
     &::after {
         position: absolute;
-
         transition: transform 0.15s ease;
-
         width: 40px;
         height: 4px;
         border-radius: 4px;
-
         background-color: #000;
     }
 
     &::before,
     &::after {
         content: '';
-
         display: block;
     }
 
     &::before {
         top: -10px;
-
         transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     }
 
     &::after {
         bottom: -10px;
-
         transition: top 0.1s 0.25s ease-in,
             transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }

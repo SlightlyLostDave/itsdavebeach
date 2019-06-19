@@ -76,15 +76,14 @@ function davebeach_scripts() {
 	wp_enqueue_style( 'itsdavebeach-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'davebeach-stylesheet', get_template_directory_uri() . '/dist/css/bundle.css', array(), '1.0.0', 'all' );
 
-	wp_enqueue_script( 'skrollr', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', null, '0.6.30', true );
 	wp_enqueue_script( 'davebeach-scripts', get_template_directory_uri() . '/dist/js/bundle.js', array('jquery'), '1.0.0', true );
 
 	if ( is_home() ) {
+		wp_enqueue_style( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css', null, '2.3.1' );
 		wp_enqueue_style( 'itsdavebeach-style__home', get_template_directory_uri() . '/dist/css/home.css' );
 
-		wp_enqueue_script( 'davebeach__home', get_template_directory_uri() . '/dist/js/home.js', array('jquery'), 1.0, true);
-	} else {
-		wp_enqueue_script( 'itsdavebeach-content-page', get_template_directory_uri() . '/js/content-page.js', null, 1.0, true);
+		wp_enqueue_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', null, '2.3.1', true );
+		wp_enqueue_script( 'davebeach__home', get_template_directory_uri() . '/dist/js/home.js', array('jquery'), '1.0.0', true);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'davebeach_scripts' );

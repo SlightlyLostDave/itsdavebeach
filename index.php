@@ -16,9 +16,9 @@ get_header();
 
     <!-- Marquee -->
     <section id="marquee" class="stage">
-        <div class="marquee__wrapper" data-top-bottom="transform: translateY(250px);" data-bottom-top="transform: translateY(-250px);">
+        <div class="marquee__wrapper">
             <div class="marquee__slide">
-                <div class="marquee__text" data-top-bottom="transform: translateY(-150px);" data-bottom-top="transform: translateY(150px);">
+                <div class="marquee__text">
                     <h1 class="heading-1">Hi, I&rsquo;m Dave Beach</h1>
                     <h2 class="heading-2">Full-stack developer with a passion for immersive experiences and blazing-fast code</h2>
                     <button class="btn btn-primary" data-start-btn data-bg="about.jpg" data-text="About Me"><span>Let&rsquo;s Go</span></button>
@@ -36,7 +36,7 @@ get_header();
 
     </div>
     
-    <div id="skrollr-body" class="content-block stage">
+    <div class="content-block stage">
 
         <!-- About -->
         <section id="about">
@@ -62,7 +62,7 @@ get_header();
 
                 <ul class="resume">
                     <li class="resume__title">Present</li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Saatchi & Saatchi Canada (formerly TPM Communications)</h2>
                         <p class="heading-4">Senior Developer</p>
                         <ul>
@@ -73,7 +73,7 @@ get_header();
                         <p class="heading-5">Jun 2010 - Present</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-right" data-aos-once="true">
                         <h2 class="heading-3">TunnelBear</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -84,7 +84,7 @@ get_header();
                         <p class="heading-5">Sep 2012 - Mar 2015</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Sesame Communications</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -93,7 +93,7 @@ get_header();
                         <p class="heading-5">Sep 2009 - Aug 2010</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-right" data-aos-once="true">
                         <h2 class="heading-3">Blast Radius</h2>
                         <p class="heading-4">Lead Interface Developer, Contract</p>
                         <ul>
@@ -103,7 +103,7 @@ get_header();
                         <p class="heading-5">Dec 2008 - Jul 2010</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Henderson Bas</h2>
                         <p class="heading-4">Interface Developer, Contract</p>
                         <ul>
@@ -112,7 +112,7 @@ get_header();
                         <p class="heading-5">Sep 2008 - Dec 2008</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-right" data-aos-once="true">
                         <h2 class="heading-3">Boom Resource</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -121,7 +121,7 @@ get_header();
                         <p class="heading-5">Jun 2008 - Dec 2008</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Project JLM</h2>
                         <p class="heading-4">Technical Lead</p>
                         <ul>
@@ -131,7 +131,7 @@ get_header();
                         <p class="heading-5">May 2008 - Jul 2010</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-right" data-aos-once="true">
                         <h2 class="heading-3">e-BizSoft</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -140,7 +140,7 @@ get_header();
                         <p class="heading-5">May 2008 - Jul 2009</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">ESAB Welding & Cutting Products</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -149,7 +149,7 @@ get_header();
                         <p class="heading-5">Mar 2008 - Sep 2008</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-right" data-aos-once="true">
                         <h2 class="heading-3">Fortify Software</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -158,7 +158,7 @@ get_header();
                         <p class="heading-5">Feb 2007 - Nov 2007</p>
                         <span class="resume__item--arrow"></span>
                     </li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Cleanpage</h2>
                         <p class="heading-4">Freelance Developer</p>
                         <ul>
@@ -168,7 +168,7 @@ get_header();
                         <span class="resume__item--arrow"></span>
                     </li>
                     <li class="resume__title">Education</li>
-                    <li class="resume__item">
+                    <li class="resume__item" data-aos="fade-left" data-aos-once="true">
                         <h2 class="heading-3">Rochester Institute of Technology</h2>
                         <p class="heading-4">Information Technology</p>
                         <p>Concentration in web & game development</p>

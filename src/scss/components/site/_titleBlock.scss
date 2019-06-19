@@ -50,14 +50,10 @@
 
 .title-block__text {
     position: relative;
-
     display: inline-block;
-
     margin: 0 auto 50px;
     padding: 0.5em 0.5em 0.3em;
-
     background: $colour__dark-grey;
-
     font: setStyle($fonts, $selectedFont, primary);
     font-size: 44pt;
     letter-spacing: 2px;

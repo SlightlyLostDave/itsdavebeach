@@ -51,14 +51,14 @@ class SinglePageNav {
                 'scrollTop',
                 '',
                 document.documentElement.scrollTop,
-                $el.offsetTop + window.innerHeight,
+                $el.offsetTop + window.innerHeight - 50,
                 250,
                 true,
                 function() {
                     document.querySelector(
                         '.title-block__bg'
                     ).style.backgroundImage =
-                        'url(/wp-content/themes/itsdavebeach/dist/images/content/title-cards/' +
+                        'url(/wp-content/themes/davebeach.me/dist/images/content/title-cards/' +
                         link.getAttribute('data-bg') +
                         ')';
                     document.querySelector(
@@ -131,7 +131,7 @@ class SinglePageNav {
         const sectionText = $link.getAttribute('data-text');
 
         document.querySelector('.title-block__bg').style.backgroundImage =
-            'url(/wp-content/themes/itsdavebeach/dist/images/content/title-cards/' +
+            'url(/wp-content/themes/davebeach.me/dist/images/content/title-cards/' +
             sectionBG +
             ')';
         document.querySelector('.title-block__text').innerHTML = sectionText;
