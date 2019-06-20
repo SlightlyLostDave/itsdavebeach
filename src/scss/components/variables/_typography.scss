@@ -65,7 +65,7 @@ $fonts: (
             )
     ),
     combo4: (
-        import: 'https://fonts.googleapis.com/css?family=Anton|Open+Sans:300',
+        import: 'https://fonts.googleapis.com/css?family=Anton|Open+Sans:400',
         primary: 120pt
             (
                 'Anton',
@@ -86,7 +86,7 @@ $fonts: (
     ),
     combo5: (
         import:
-            'https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:300',
+            'https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans:400',
         primary: 38pt
             (
                 'Josefin Slab',
@@ -99,7 +99,7 @@ $fonts: (
                 sans-serif
             ),
         secondaryTextTransform: uppercase,
-        tertiary: 12pt
+        tertiary: 14px
             (
                 'Open Sans',
                 sans-serif

@@ -66,8 +66,8 @@ get_header();
                         <h2 class="heading-3">Saatchi & Saatchi Canada (formerly TPM Communications)</h2>
                         <p class="heading-4">Senior Developer</p>
                         <ul>
-                            <li>Involved from wireframing through launch with redesigns for both Toyota and Lexus that achieved the #1 rank for automotive company OEM websites and Canada’s 1st responsive automotive brand website</li>
-                            <li>Architected technology stacks for projects utilizing modern technologies including Java/Struts, Freemarker, LESS, Laravel, WordPress, and Angular</li>
+                            <li> Involved from wireframing through launch with redesigns for both Toyota and Lexus that achieved the #1 rank for automotive company OEM websites from JD Power and were Canada’s 1st responsive automotive brand websites</li>
+                            <li>Architected technology stacks for projects utilizing modern technologies including Angular, LESS, Java/Struts, Freemarker, Laravel, and WordPress</li>
                             <li>Spearheaded the development and implementation of new company-wide processes to switch from waterfall to an agile development model, including the onboarding of non-technical team members</li>
                         </ul>
                         <p class="heading-5">Jun 2010 - Present</p>
@@ -185,33 +185,50 @@ get_header();
             <div class="section__container">
                 <h1 class="heading-1">Skills</h1>
 
-                <h2 class="heading-2">Development</h2>
-                HTML &bull;
-                CSS &bull;
-                SASS/LESS &bull;
-                Responsive &bull;
-                JavaScript &bull;
-                React &bull;
-                Accessibility &bull;
-                PHP &bull;
-                ASP.NET &bull;
-                WordPress &bull;
-                Database
+                <div class="skills__section" data-aos="fade" data-aos-once="true">
+                    <h2 class="heading-2">Development</h2>
+                    <ul class="skills__list" data-aos="skills" data-aos-once="true">
+                        <li class="skills__95">JavaScript</li>
+                        <li class="skills__95">React</li>
+                        <li class="skills__90">Node.js</li>
+                        <li class="skills__80">Angular</li>
+                        <li class="skills__95">SASS/LESS</li>
+                        <li class="skills__95">CSS (inc. Flexbox & Grid)</li>
+                        <li class="skills__80">Git</li>
+                        <li class="skills__60">Build Tools (Gulp, Ant)</li>
+                        <li class="skills__80">MongoDB</li>
+                        <li class="skills__90">MySQL</li>
+                        <li class="skills__95">Responsive</li>
+                        <li class="skills__80">Accessibility</li>
+                        <li class="skills__90">PHP</li>
+                        <li class="skills__90">WordPress</li>
+                        <li class="skills__80">Classic ASP</li>
+                    </ul>
+                </div>
 
-                <h2 class="heading-2">VR/AR</h2>
-                Aerial Photo/Video &bull;
-                Photogrammetry &bull;
-                3D Modeling &bull;
-                Unreal Engine &bull;
-                Unity
+                <div class="skills__section" data-aos="fade" data-aos-delay="500" data-aos-once="true">
+                    <h2 class="heading-2">Interactive</h2>
+                    <ul class="skills__list" data-aos="skills" data-aos-once="true">
+                        <li class="skills__60">Aerial Photo/Video</li>
+                        <li class="skills__80">Photogrammetry</li>
+                        <li class="skills__60">3D Modeling</li>
+                        <li class="skills__60">Unreal Engine</li>
+                        <li class="skills__60">Unity</li>
+                    </ul>
+                </div>
 
-                <h2 class="heading-2">Soft Skills</h2>
-                Team Management &bull;
-                Organization &bull;
-                Process Management &bull;
-                User Experience Design &bull;
-                Wireframing &bull;
-                Problem-solving to hunt down that last elusive bug
+                <div class="skills__section" data-aos="fade" data-aos-delay="1000" data-aos-once="true">
+                    <h2 class="heading-2">Soft Skills</h2>
+                    <ul class="skills__list" data-aos="skills" data-aos-once="true">
+                        <li class="skills__90">Team Management</li>
+                        <li class="skills__95">Organization</li>
+                        <li class="skills__95">Process Management</li>
+                        <li class="skills__80">Database Architecture</li>
+                        <li class="skills__70">User-Experience Design</li>
+                        <li class="skills__70">Wireframing</li>
+                        <li class="skills__95">Problem-solving to hunt down that last elusive bug</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
