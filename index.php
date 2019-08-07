@@ -51,7 +51,7 @@ get_header();
                 Team Lead
                 -->
 
-                <p>I am a driven and inquisitive full-stack developer that combines a background in large-scale projects and team management with expertise in development with the web's leading-edge technologies to deliver on time and above expectations. I deliver award-winning websites for brands including Toyota and Lexus. My near-obsessive organizational and planning skills keeping projects on target. Always hungry to learn the next interesting technology, I am continuously learning and expanding my knowledge base.</p>
+                <p data-aos="fade-left" data-aos-once="true">I am a driven and inquisitive full-stack developer that combines a background in large-scale projects and team management with expertise in development with the web's leading-edge technologies to deliver on time and above expectations. I deliver award-winning websites for brands including Toyota and Lexus. My near-obsessive organizational and planning skills keeping projects on target. Always hungry to learn the next interesting technology, I am continuously learning and expanding my knowledge base.</p>
             </div>
         </section>
 
