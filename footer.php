@@ -16,7 +16,7 @@
             <a class="contact__link contact-instagram" href="https://www.instagram.com/slightlylostdave/" target="_blank"></a>
             <a class="contact__link contact-twitter" href="https://twitter.com/ItsDaveBeach" target="_blank"></a>
             <a class="contact__link contact-github" href="https://github.com/SlightlyLostDave" target="_blank"></a>
-            <a class="contact__link contact-email" href="mailto:info@davebeach.me"></a>
+            <a class="contact__link contact-email" href="mailto:hello@davebeach.me"></a>
 
             <p>Dave Beach &copy;<?php echo date("Y"); ?></p>
         </footer>
