@@ -95,7 +95,7 @@ function davebeach_add_googleanalytics() { ?>
 		};
 		ga.q = [];
 		ga.l = +new Date();
-		ga('create', 'UA-132742582-1', 'auto');
+		ga('create', 'UA-145414044-1', 'auto');
 		ga('send', 'pageview');
 	</script>
 	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
